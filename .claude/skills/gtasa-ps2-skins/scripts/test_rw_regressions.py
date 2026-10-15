@@ -43,8 +43,13 @@ class StreamRegressions(unittest.TestCase):
         report = audit_dff_file(str(self.output))
         self.assertTrue(report['valid'], report['errors'])
         self.assertEqual(report['frame_count'], 33)
-        self.assertEqual((report['vertex_count'], report['triangle_count']), (1050, 1145))
+        self.assertEqual((report['vertex_count'], report['triangle_count']), (1080, 1165))
         self.assertGreater(self.mesh['bone_weights'][self.mesh['bone_indices'] == 1].sum(), 0)
+
+    def test_head_keeps_original_crown_height_and_visible_neck(self):
+        head = self.mesh['vertices'][self.mesh['uvs'][:, 0] < .5]
+        self.assertGreater(head[:, 0].min(), .62, 'Chin must not be sunk into the shirt collar')
+        self.assertAlmostEqual(head[:, 0].max(), .86963618, places=5)
 
     def test_reject_root_weight(self):
         result = self.audit_mutation(lambda d, i, w: d.__setitem__(i, 0))

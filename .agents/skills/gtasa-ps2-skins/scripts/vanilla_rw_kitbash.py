@@ -8,9 +8,9 @@ surgery described in `AGENTS.md` §6 on the *authentic* Rockstar North meshes an
 1. Reads the GTA:SA `.img` archive (IMG V2) and extracts the donor `.dff`/`.txd` and body `.dff`/`.txd`.
 2. Parses the RenderWare 3.6.0.3 streams (`Clump`, `FrameList` + `HAnim PLG 0x011E`, `Geometry`,
    `Bin Mesh PLG 0x050E`, `Skin PLG 0x0116`, `TextureNative 0x0015`).
-3. Grafts the donor head onto the body: the head chain (`Head`, `Jaw`, `Brow` bones) is sectioned
-   from both meshes, the donor head is rigidly aligned onto the body neck ring (centroid + radius),
-   snapped, and re-weighted; shared normals are re-derived so the seam does not crack.
+3. Grafts the donor skull at the removed skull's original crown height. Preserves the body's
+   cervical transition triangles, original neck weights and donor head weights; fits neck
+   endpoints under the donor surface and removes LSV2's old bandana accessory.
 4. Splices the two vanilla texture atlases into a single PS2-style atlas (donor head region +
    body garment region) and repacks the UVs of both halves.
 5. Writes a game-loadable `.dff` (33 Frames / 32 HAnim bones, geometry flags `0x00010036`) and a
@@ -305,10 +305,11 @@ def _head_chain_mask(ped: Dict[str, object]) -> np.ndarray:
     return mask
 
 
-def _solid_half(ped: Dict[str, object], keep: np.ndarray) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-    """Triangles whose three vertices all pass `keep`, plus the compacted vertex arrays."""
+def _solid_half(ped: Dict[str, object], keep: np.ndarray, keep_mixed: bool = False) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """Compact a cut; retain mixed neck/head triangles on the body when requested."""
     tri = np.asarray(ped["triangles"])[:, [1, 0, 3]]
-    kept = tri[keep[tri].all(axis=1)]
+    selection = keep[tri].any(axis=1) if keep_mixed else keep[tri].all(axis=1)
+    kept = tri[selection]
     if len(kept) == 0:
         raise RuntimeError("head-swap cut removed every triangle from one half")
     used = np.zeros(len(keep), dtype=bool)
@@ -324,36 +325,22 @@ def _solid_half(ped: Dict[str, object], keep: np.ndarray) -> Tuple[np.ndarray, n
     )
 
 
-def _neck_lip(vertices: np.ndarray, top: bool) -> np.ndarray:
-    """Centerline vertices at the top of a body or the bottom of a head (the collar lip)."""
-    yz = np.linalg.norm(vertices[:, 1:], axis=1)
-    center = yz < 0.10
-    if int(center.sum()) < 4:
-        center = yz < 0.16
-    band = vertices[center]
-    if top:
-        return band[band[:, 0] >= band[:, 0].max() - 0.05]
-    return band[band[:, 0] <= band[:, 0].min() + 0.03]
-
-
 def graft_head(
     body: Dict[str, object],
     donor: Dict[str, object],
     head_weight_threshold: float = 0.5,
 ) -> Dict[str, object]:
     """
-    Cut the head chain out of `body` and seat `donor`'s head in the collar.
+    Replace the skull while preserving the body's complete animated neck.
 
-    Vanilla ped meshes are non-manifold (UV-seam duplicates, edges used once), so the
-    neck cannot be closed by walking shared edges. The fit that matches the art is a
-    rigid seat: scale the donor head to the removed head's width, then sink its chin
-    lip a couple of centimetres into the body collar so the crack stays hidden.
-    The sunk lip copies the collar's skin weights, so it follows the neck in-game.
+    Mixed neck/head triangles belong to the cervical transition and must survive
+    the body cut. Fit the donor to the removed skull bounds, preserving crown
+    height and head-chain weights. Never align the chin to the shirt collar.
     """
     body_keep = _head_chain_mask(body) < head_weight_threshold
     donor_keep = _head_chain_mask(donor) >= head_weight_threshold
 
-    b_verts, b_uvs, b_idx, b_wgt, b_tris = _solid_half(body, body_keep)
+    b_verts, b_uvs, b_idx, b_wgt, b_tris = _solid_half(body, body_keep, keep_mixed=True)
     d_verts, d_uvs, d_idx, d_wgt, d_tris = _solid_half(donor, donor_keep)
 
     # Scale against the head that was just cut off, so the new head fills the same collar.
@@ -366,28 +353,38 @@ def graft_head(
         1.20,
     ))
 
-    body_lip = _neck_lip(b_verts, top=True)
-    donor_lip = _neck_lip(d_verts, top=False)
-    anchor = donor_lip.mean(axis=0)
-    # Sink 1.8 cm into the collar (X is up) so the two shells overlap instead of cracking.
-    target = np.array([
-        body_lip[:, 0].mean() - 0.018,
-        body_lip[:, 1].mean(),
-        body_lip[:, 2].mean(),
-    ])
+    anchor = (d_verts.min(axis=0) + d_verts.max(axis=0)) * 0.5
+    target = (removed.min(axis=0) + removed.max(axis=0)) * 0.5
+    anchor[0] = d_verts[:, 0].max()
+    target[0] = removed[:, 0].max()
     d_verts = target + scale * (d_verts - anchor)
 
-    # The sunk lip follows the collar, not the severed head chain.
-    lip_local = np.where(d_verts[:, 0] <= target[0] + 0.03)[0]
-    if len(lip_local) and len(body_lip):
-        nearest = np.argmin(np.linalg.norm(body_lip[None, :, :] - d_verts[lip_local][:, None, :], axis=2), axis=1)
-        body_lip_index = np.array([
-            int(np.argmin(np.linalg.norm(b_verts - p, axis=1))) for p in body_lip
-        ])
-        for k, local in enumerate(lip_local):
-            src = body_lip_index[nearest[k]]
-            d_idx[local] = b_idx[src]
-            d_wgt[local] = b_wgt[src]
+    # Retained neck triangles end on the old skull (including its bandana UVs).
+    # Tuck only those endpoints under the donor surface, keeping the lower neck
+    # and its original weights intact. This prevents old-head scraps protruding.
+    neck_end = _head_chain_mask({'node_bone_ids': body['node_bone_ids'],
+                                'bone_indices': b_idx, 'bone_weights': b_wgt}) >= head_weight_threshold
+    faces = d_verts[d_tris]
+    a, b, c = faces[:, 0], faces[:, 1], faces[:, 2]
+    ab, ac = b-a, c-a
+    aa, bb, cc = (ab*ab).sum(1), (ab*ac).sum(1), (ac*ac).sum(1)
+    den = np.maximum(aa*cc-bb*bb, 1e-15)
+    for index in np.flatnonzero(neck_end):
+        point = b_verts[index]
+        ap = point-a
+        u = (cc*(ap*ab).sum(1)-bb*(ap*ac).sum(1))/den
+        v = (aa*(ap*ac).sum(1)-bb*(ap*ab).sum(1))/den
+        plane = a + u[:, None]*ab + v[:, None]*ac
+        valid = (u >= 0) & (v >= 0) & (u+v <= 1)
+        candidates = [plane[valid]]
+        for start, end in ((a, b), (b, c), (c, a)):
+            edge = end-start
+            t = np.clip(((point-start)*edge).sum(1)/np.maximum((edge*edge).sum(1), 1e-15), 0, 1)
+            candidates.append(start+t[:, None]*edge)
+        candidates = np.vstack(candidates)
+        nearest = candidates[np.argmin(((candidates-point)**2).sum(1))]
+        inward = d_verts.mean(0)-nearest
+        b_verts[index] = nearest + inward/max(np.linalg.norm(inward), 1e-9)*.004
 
     vertices = np.vstack([b_verts, d_verts])
     uvs = np.vstack([b_uvs, d_uvs])
@@ -432,15 +429,15 @@ def graft_head(
             "donor_head_vertices": int(len(d_verts)),
             "body_triangles_kept": int(len(b_tris)),
             "donor_head_triangles": int(len(d_tris)),
-            "body_neck_lip": int(len(body_lip)),
-            "donor_neck_lip": int(len(donor_lip)),
-            "lip_vertices_rewritten": int(len(lip_local)),
+            "neck_boundary_triangles_preserved": int((body_keep[np.asarray(body['triangles'])[:, [1, 0, 3]]].any(1) & ~body_keep[np.asarray(body['triangles'])[:, [1, 0, 3]]].all(1)).sum()),
+            "head_weights_rewritten": 0,
+            "neck_endpoints_fitted": int(neck_end.sum()),
             "degenerate_faces_dropped": degenerate_faces,
             "orphan_vertices_dropped": orphans,
             "vertices_out": int(len(vertices)),
             "triangles_out": int(len(triangles)),
             "head_scale": round(float(scale), 5),
-            "seat_target": [round(float(x), 4) for x in target],
+            "crown_target": [round(float(x), 4) for x in target],
         },
     }
 
@@ -612,7 +609,23 @@ def build_kitbash_skin(
     finally:
         handle.close()
 
+    # LSV2 has a yellow bandana tail crossing the head/neck cut. It is a head
+    # accessory, not part of the cervical surface. Identify its vanilla yellow
+    # UV island only in the upper nape; skin/clothing elsewhere stay untouched.
+    accessory_faces_removed = 0
+    if body_model.lower() == 'lsv2':
+        raw = np.asarray(body_dff['triangles'])
+        faces = raw[:, [1, 0, 3]]
+        uv = np.asarray(body_dff['uvs'])[faces].mean(1)
+        color = body_txd[np.clip((uv[:, 1]*body_txd.shape[0]).astype(int), 0, body_txd.shape[0]-1),
+                         np.clip((uv[:, 0]*body_txd.shape[1]).astype(int), 0, body_txd.shape[1]-1)].astype(int)
+        center = np.asarray(body_dff['vertices'])[faces].mean(1)
+        accessory = ((color[:, 0]-color[:, 2] > 80) & (color[:, 1]-color[:, 2] > 50)
+                     & (center[:, 0] > .6) & (center[:, 1] < -.06))
+        accessory_faces_removed = int(accessory.sum())
+        body_dff['triangles'] = raw[~accessory]
     merged = graft_head(body_dff, head_dff)
+    merged['stats']['body_head_accessory_faces_removed'] = accessory_faces_removed
 
     atlas_rgb, uv_mapping = splice_atlas(head_txd, body_txd, atlas_size=atlas_size)
     donor_mask = np.asarray(merged["is_donor"])
