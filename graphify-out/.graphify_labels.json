@@ -1,7 +1,7 @@
 {
-  "0": "audit_dff_file",
-  "1": "audit_dff_file",
-  "2": "audit_dff_file",
+  "0": "StreamRegressions",
+  "1": "StreamRegressions",
+  "2": "StreamRegressions",
   "3": "AGENTS.md Master Specification",
   "4": ".agents/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py",
   "5": ".claude/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py",
@@ -16,5 +16,10 @@
   "14": "Harness Entry Points, Mirrors, and Drift Control",
   "15": "Dryxio gta-3d-ai Toolchain (GTA Scout, Ariane, GTA Stuff)",
   "16": ".claude/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-  "17": "HANDOFF — Skin `sindaco_lsv2` (cabeza `sindaco` + cuerpo `lsv2`)"
+  "17": "HANDOFF — Skin `sindaco_lsv2` (cabeza `sindaco` + cuerpo `lsv2`)",
+  "18": "process_and_pack_ps2_txd",
+  "19": "process_and_pack_ps2_txd",
+  "20": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_worker.py",
+  "21": ".claude/skills/gtasa-ps2-skins/scripts/render_blender_worker.py",
+  "22": "scripts/render_blender_worker.py"
 }
