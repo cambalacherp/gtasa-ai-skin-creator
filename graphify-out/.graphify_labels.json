@@ -1,1 +1,20 @@
-{"0": "TXD Quantizer (Claude Mirror)", "1": "Rig Generator (Canonical Skill)", "2": "Ped Mesh Rig Generator (Root)", "3": "Harness Docs & Skill Specs", "4": "Harness Sync (Canonical Skill)", "5": "Harness Sync (Claude Mirror)", "6": "Harness Sync (Root)", "7": "TXD Quantizer (Canonical Skill)", "8": "PS2 TXD Quantizer (Root)", "9": "Rig Generator (Claude Mirror)", "10": "Tenpenny Police Atlas", "11": "Sindacco Hoodie Atlas", "12": "Claude Jacket Atlas", "13": "Kitbash Recipes & Bone Table", "14": "Mirror Drift-Control Design", "15": "Dryxio Vibe Matching"}
+{
+  "0": "audit_dff_file",
+  "1": "audit_dff_file",
+  "2": "audit_dff_file",
+  "3": "AGENTS.md Master Specification",
+  "4": ".agents/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py",
+  "5": ".claude/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py",
+  "6": "scripts/sync_agent_harnesses.py",
+  "7": "scripts/vanilla_rw_kitbash.py",
+  "8": "process_and_pack_ps2_txd",
+  "9": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
+  "10": "bmypol1_tenpenny Texture Atlas (256x256 PS2 Ped Skin)",
+  "11": "wmydrug_sindacco Texture Atlas (256x256 PS2 Ped Skin)",
+  "12": "wmybar_claude Texture Atlas (256x256 PS2 Ped Atlas)",
+  "13": "32-Bone GTA:SA HAnim Skeleton Table",
+  "14": "Harness Entry Points, Mirrors, and Drift Control",
+  "15": "Dryxio gta-3d-ai Toolchain (GTA Scout, Ariane, GTA Stuff)",
+  "16": ".claude/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
+  "17": "HANDOFF — Skin `sindaco_lsv2` (cabeza `sindaco` + cuerpo `lsv2`)"
+}
