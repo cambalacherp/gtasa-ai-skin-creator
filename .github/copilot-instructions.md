@@ -9,6 +9,7 @@ Read it and follow it for every task in this repository; this file only states t
 2. Every skin request must produce, in `output/<skin_name>/`: `<skin_name>.dff`, `<skin_name>.txd`, `<skin_name>_vibe_sheet.png`, and `<skin_name>_report.json` with `"status": "PASS"` from `python3 scripts/validate_rw_stream.py`.
 3. Generic requests (e.g. "make me a Russian mafia skin") trigger the 4-point interview protocol from AGENTS.md before any binary is generated; specific surgical requests run straight to compilation.
 4. The reusable skill `gtasa-ps2-skins` ships at `.agents/skills/gtasa-ps2-skins/SKILL.md` (mirrored to `.claude/skills/`); invoke it with `/gtasa-ps2-skins` or let relevance loading pick it up.
+5. For every skin, verify and normalize exposed skin across head, neck, torso, arms and hands as part of the project workflow. The head is the default tone reference unless the user specifies otherwise. Preserve tattoos/shading and non-skin materials, and inspect the exported TXD in Blender for seams. This applies to all model pairs; prepare the correct UV mask/profile for each pair instead of waiting for another request.
 
 ## Maintenance
 

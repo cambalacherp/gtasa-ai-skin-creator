@@ -11,13 +11,17 @@ Use real vanilla meshes and textures when a request names a source ped or head/b
 - Before surgery or debugging RenderWare data, read [references/vanilla_kitbash_lessons.md](references/vanilla_kitbash_lessons.md): verified binary details, the failed neck-fitting approach and the corrected method.
 - Preserve the user's chosen reference tone. Do not turn one recipe's measurements or UV boxes into rules for every ped.
 
+## Required for every skin: coherent skin tone
+
+Skin tone matching is a project-wide requirement for every model/agent, not an optional edit or a Sindaco/LSV2 exception. Verify exposed head, neck, torso, arms and hands, and normalize mismatches before delivery without waiting for another user request. Use the head as reference unless the user specifies another reference or an intentional difference. Already matching skin needs verification rather than needless recoloring. Preserve tattoos, shading, clothing and the reference texture through the final palette; check jaw/neck/shoulder seams in exported-TXD Blender captures.
+
 ## Build from vanilla assets
 
 ```powershell
-python scripts/vanilla_rw_kitbash.py --game-dir "<GTA-SA>" --head-model sindaco --body-model lsv2 --skin-name sindaco_lsv2 --outdir output/sindaco_lsv2
+python scripts/vanilla_rw_kitbash.py --game-dir "<GTA-SA>" --head-model sindaco --body-model lsv2 --skin-name sindaco_lsv2 --outdir output/sindaco_lsv2 --match-body-skin-to-head
 ```
 
-If the user wants body skin to match the head, append `--match-body-skin-to-head`. The inspected Sindaco/LSV2 profile is in `assets/tone_profiles/`. Other pairs need their own inspected masks and sample patches. Preserve tattoos/shading and protect the reference head and clothing through final palette quantization. Do not recolor an entire atlas with a blanket RGB filter.
+Use `--match-body-skin-to-head` for the supported Sindaco/LSV2 recipe; its inspected profile is in `assets/tone_profiles/`. For other pairs, create suitable inspected masks and sample patches so the same project requirement is fulfilled. Preserve tattoos/shading and protect the reference head and clothing through final palette quantization. Do not recolor an entire atlas with a blanket RGB filter.
 
 Rebuild after engine changes; stale DFF/TXD files or screenshots cannot verify current code.
 

@@ -33,7 +33,7 @@ Read for head swaps, UV color matching or RenderWare parser debugging. Findings 
 
 ## Skin color matching
 
-- Respect the requested reference. In this approved variant the body (neck, arms, hands) takes Sindaco's head tone; the head stays unchanged.
+- Project policy for every skin and every model/agent: verify and normalize exposed skin across head, neck, torso, arms and hands as part of the normal workflow, without requiring a separate request. Use the head as the default reference unless the user selects another reference or an intentional difference. Already coherent skin needs verification rather than gratuitous recoloring. Sindaco/LSV2 is one supported example of this general requirement.
 - Sample clean midtone skin, excluding hair, features, deep shadows and ink. Use inspected UV material masks and multiplicative color transfer to retain shading/tattoos; do not paint a flat fill or generate replacement imagery.
 - LSV2's arm island starts at row 28, not 32. Missing these rows leaves dark shoulder strips. Do not blindly widen the chest mask: the dirty white tank top has beige pixels that broad color thresholds can misclassify.
 - Profiles store source dimensions, samples and UV regions. Refuse unknown pairs/dimensions rather than silently reusing another ped's coordinates.
