@@ -1,5 +1,9 @@
 # AGENTS.md — Autonomous Low-Poly Skin Creation System for GTA: San Andreas (PlayStation 2 RenderWare Style + `gta-3d-ai` Flow for `open.mp` / SA-MP)
 
+## Repository commit identity
+
+All commits in this project must use `cambalacherp <223213695+cambalacherp@users.noreply.github.com>` as both author and committer. Do not add `Co-Authored-By`, `Co-Author`, `Co-Authors` or any other secondary authorship attribution. Configure this repository locally with `user.name=cambalacherp`, `user.email=223213695+cambalacherp@users.noreply.github.com`, `user.useConfigOnly=true` and `core.hooksPath=.githooks`. Preserve these settings and the identity-checking `commit-msg` hook; do not bypass it. Check the actual committed metadata, not just Git configuration, before reporting completion.
+
 ## 1. The Agent Must Operate Under Dryxio's Vanilla "Vibe Matching" Paradigm (`gta-3d-ai`) and Compile for PC (`open.mp` / SA-MP)
 
 This document is the master operating protocol for any coding-agent harness — **OpenCode**, **OpenAI Codex**, **VS Code + Copilot Chat**, **Google Antigravity**, **Claude Code**, or an advanced multimodal AI model (e.g. **Gemini Argon** or **GPT-6 Astra**) — to design, model, rig, texture, and validate pedestrian skins (`peds`) for **Grand Theft Auto: San Andreas** that run on PC under [open.mp](https://open.mp/docs/scripting/resources/boneid) and [SA-MP](https://sampwiki.blast.hk/wiki/Bone_IDs), preserving 100% of the PlayStation 2 art direction, low-poly topology, and lighting on [RenderWare 3.6.0.3](https://www.grandtheftwiki.com/RenderWare).
