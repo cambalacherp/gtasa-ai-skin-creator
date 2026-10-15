@@ -13,6 +13,9 @@ Read for head swaps, UV color matching or RenderWare parser debugging. Findings 
 
 ## Verified RenderWare layout
 
+- Clump Struct is three u32 counts: `(numAtomics, numLights, numCameras)`, `(1,0,0)` for this ped. Do not copy a chunk HEADER `(type,size,version)` into a Struct PAYLOAD. The old exporter wrote `(1,12,0x1803FFFF)`: GTA Stuff then attempted to read nonexistent lights/cameras and failed at end-of-file, position 86089. A matching in-house parser/renderer had missed this; real external-reader verification caught it.
+- MaterialList Struct is a u32 material count followed by signed i32 references. A new material is `-1`; reused references must point to an earlier slot. The old `(1,8)` payload is invalid; this ped uses `(1,-1)`.
+- Validate chunk boundaries without silently clamping oversized payloads. Cross-check declared Clump/GeometryList counts, FrameList payload size, Atomic frame/geometry references and MaterialList references against actual content. Add negative fixtures for each exporter bug.
 - Vanilla LSV2 has 33 frames: an unbound container plus 32 bone frames. The procedural legacy generator has 32 frames; its layout is not a vanilla surgery template.
 - Skin indices address the HAnim node table, not Bone IDs or FrameList indices. Preserve the body's node order and inverse bind matrices together.
 - Vanilla node-index-to-Bone-ID table: `[0,1,2,3,4,5,8,6,7,31,32,33,34,35,36,21,22,23,24,25,26,302,301,201,41,42,43,44,51,52,53,54]`.
@@ -42,6 +45,7 @@ Read for head swaps, UV color matching or RenderWare parser debugging. Findings 
 
 ## Verification and memory
 
+- When changing binary serialization, reproduce the failure and load the rebuilt DFF/TXD in an independent consumer (such as the user's GTA Stuff viewer). A writer and parser that share assumptions can agree on an invalid stream. Preserve a viewer screenshot and hashes of the verified files; a successful viewer load still does not claim game-runtime testing.
 - Rebuild after engine changes; re-render geometry/UV/TXD changes and package current artifacts. Inspect individual reports instead of trusting a suite's summary string.
 - Binary structure, Blender appearance and diagnostic pose checks do not establish in-game behavior. Only an actual game run does; report the distinction.
 - Canonical memory is `AGENTS.md` plus `.agents/skills/gtasa-ps2-skins/`. Regenerate script/reference/Claude mirrors and refresh the installed skill. Keep universal guidance separate from recipe measurements and historical debugging notes.

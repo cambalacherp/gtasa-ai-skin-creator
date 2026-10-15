@@ -39,6 +39,8 @@ Inspect neck length, shoulder/nape continuity, old-head accessories, tone seams,
 
 Run `scripts/validate_rw_stream.py --dff <skin>.dff --txd <skin>.txd --base-skin-id <base> --custom-skin-id <custom>`. Deliver DFF/TXD, screenshots, binary report and AddCharModel registration; include the mask/tone audit for color edits. Distinguish binary PASS, visual review and actual in-game testing.
 
+For exporter/serialization changes, also verify the rebuilt pair in an independent consumer, preferably the user's target viewer. The internal parser and Blender importer may share an incorrect binary assumption. Record the verified file hashes and viewer evidence.
+
 ## Maintain the skill
 
 Root `scripts/`, `AGENTS.md` and `.agents/skills/gtasa-ps2-skins/` are canonical. Run `scripts/sync_agent_harnesses.py`, then `--check`, and refresh the installed skill from that bundle. Keep reusable lessons in the linked reference and recipe-specific data in profile assets. Validate entrypoint changes with skill-creator's `quick_validate.py`.

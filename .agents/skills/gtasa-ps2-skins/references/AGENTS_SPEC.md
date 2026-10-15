@@ -18,6 +18,8 @@ Preserve tattoos, shading and skin texture, and protect clothing, hair and the r
 3. **`output/<skin_name>/<skin_name>_vibe_sheet.png`**: Multi-angle contact sheet (`Front`, `Side`, `Back`, `3/4`, and `Pose Test`) captured from the exported DFF/TXD by local Blender CLI via `scripts/render_blender_cli.py` (never an image generation API) for visual self-critique of the model.
 4. **`output/<skin_name>/<skin_name>_report.json`**: Binary certificate issued by `scripts/validate_rw_stream.py`, together with the Pawn `AddCharModel` block ready for `open.mp` / SA-MP servers.
 
+For changes to binary serialization, verify the rebuilt DFF/TXD with an independent consumer, preferably the user's target viewer, and retain screenshot/file-hash evidence. Internal parsing and Blender previews can share an exporter bug. Clump Struct counts and MaterialList reference tables must be checked against their actual contents; see the skill's verified lessons.
+
 ## 2. Specificity Router and Customization Interview Protocol for Generic Prompts
 
 The agent must classify each incoming prompt by how well defined it is before running any Blender code:
