@@ -1,7 +1,22 @@
-# Python cache
+# Python bytecode and local environments
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+.pytest_cache/
 
-# graphify machine-local state (interpreter path + scan root; portable outputs stay tracked)
-graphify-out/.graphify_python
-graphify-out/.graphify_root
+# Blender automatic backups and reproducible render-worker input
+*.blend[0-9]*
+/output/**/blender_screenshots/actual_dff_txd.npz
+
+# Graphify local caches, incremental timestamps, and temporary pipeline state
+/graphify-out/cache/
+/graphify-out/manifest.json
+/graphify-out/.graphify_*
+/graphify-out/.needs_update
+
+# Keep portable community labels alongside graph.json, graph.html and the report
+!/graphify-out/.graphify_labels.json
+!/graphify-out/.graphify_labels.json.sig
+
+# Automatically generated dated backups of the portable graph
+/graphify-out/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
