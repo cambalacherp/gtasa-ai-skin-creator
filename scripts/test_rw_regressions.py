@@ -1,5 +1,6 @@
 """Regression checks against the real exported skin and corrupted weight streams."""
 import struct
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -7,7 +8,9 @@ from pathlib import Path
 import numpy as np
 
 from build_ps2_rig_bpy import write_standalone_gtasa_ped_dff
-from vanilla_rw_kitbash import parse_ped_dff
+from vanilla_rw_kitbash import parse_ped_dff, read_txd_textures, open_img_archive, extract_img_entry, splice_atlas
+from quantize_ps2_txd import apply_ps2_color_pipeline
+from match_skin_tone import load_profile, samples
 from validate_rw_stream import audit_dff_file, parse_rw_chunks
 
 
@@ -50,6 +53,36 @@ class StreamRegressions(unittest.TestCase):
         head = self.mesh['vertices'][self.mesh['uvs'][:, 0] < .5]
         self.assertGreater(head[:, 0].min(), .62, 'Chin must not be sunk into the shirt collar')
         self.assertAlmostEqual(head[:, 0].max(), .86963618, places=5)
+
+    def test_body_skin_matches_head_in_exported_txd(self):
+        decoded = read_txd_textures(self.output.with_suffix('.txd').read_bytes())[0][1]
+        profile = load_profile('sindaco', 'lsv2')
+        reference = np.median(samples(decoded[:, :256], profile['head_samples']), axis=0)
+        body = np.median(samples(decoded[:, 256:384], profile['body_samples']), axis=0)
+        self.assertLess(np.abs(reference-body).mean(), 4, (reference, body))
+        self.assertLessEqual(len(np.unique(decoded.reshape(-1, 3), axis=0)), 256)
+
+    def test_exported_head_and_non_skin_pixels_remain_identical(self):
+        img_path = Path(os.environ.get('GTASA_GAME_DIR', 'C:/Juegos/gta clean'))/'models/gta3.img'
+        if not img_path.exists():
+            self.skipTest('Set GTASA_GAME_DIR to compare the vanilla atlas')
+        handle, table = open_img_archive(str(img_path))
+        try:
+            head = read_txd_textures(extract_img_entry(handle, table, 'sindaco.txd'))[0][1]
+            body = read_txd_textures(extract_img_entry(handle, table, 'lsv2.txd'))[0][1]
+        finally:
+            handle.close()
+        atlas = splice_atlas(head, body)[0]
+        baseline = np.asarray(apply_ps2_color_pipeline(atlas, target_size=(512, 256))[1])[:, :, :3]
+        actual = read_txd_textures(self.output.with_suffix('.txd').read_bytes())[0][1]
+        from PIL import Image
+        body_mask = np.array(Image.open(self.output.with_name('sindaco_lsv2_body_skin_mask.png'))) > 0
+        mask = np.zeros((256, 512), dtype=bool)
+        mask[:, 256:384] = body_mask
+        self.assertTrue(np.array_equal(actual[~mask], baseline[~mask]))
+        original_detail = baseline[32:165, 324:384].astype(float).mean(2).ravel()
+        corrected_detail = actual[32:165, 324:384].astype(float).mean(2).ravel()
+        self.assertGreater(np.corrcoef(original_detail, corrected_detail)[0, 1], .98, 'Tattoo and shading detail must survive recoloring')
 
     def test_reject_root_weight(self):
         result = self.audit_mutation(lambda d, i, w: d.__setitem__(i, 0))

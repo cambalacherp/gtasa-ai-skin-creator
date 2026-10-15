@@ -177,6 +177,7 @@ def apply_ps2_color_pipeline(
     colors: int = 256,
     black_floor: int = 12,
     white_ceiling: int = 235,
+    palette: Optional[Image.Image] = None,
 ) -> Tuple[Image.Image, Image.Image]:
     """Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-Steinberg dithering."""
     w, h = target_size
@@ -189,11 +190,14 @@ def apply_ps2_color_pipeline(
     arr = np.clip(np.round(arr), black_floor, white_ceiling).astype(np.uint8)
     clamped_rgb = Image.fromarray(arr, mode="RGB")
 
-    pal_img = clamped_rgb.quantize(
-        colors=colors,
-        method=Image.Quantize.MEDIANCUT,
-        dither=Image.Dither.FLOYDSTEINBERG,
-    )
+    if palette is not None:
+        pal_img = clamped_rgb.quantize(palette=palette, dither=Image.Dither.NONE)
+    else:
+        pal_img = clamped_rgb.quantize(
+            colors=colors,
+            method=Image.Quantize.MEDIANCUT,
+            dither=Image.Dither.FLOYDSTEINBERG,
+        )
     return pal_img, pal_img.convert("RGBA")
 
 

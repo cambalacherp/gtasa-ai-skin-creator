@@ -46,6 +46,7 @@ from PIL import Image
 # Allow running both as a repo script and from inside a skill bundle mirror.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from quantize_ps2_txd import apply_ps2_color_pipeline  # noqa: E402
+from match_skin_tone import load_profile, match_body_skin, palette_for_skin_edit  # noqa: E402
 
 RW_VERSION_GTASA = 0x1803FFFF
 IMG_SECTOR = 2048
@@ -594,6 +595,7 @@ def build_kitbash_skin(
     body_model: str = "lsv2",
     tex_name: Optional[str] = None,
     atlas_size: Tuple[int, int] = (512, 256),
+    match_body_skin_to_head: bool = False,
 ) -> Dict[str, object]:
     """Extract, splice, and compile a head-swap skin straight from a GTA:SA installation."""
     tex_name = (tex_name or skin_name).lower()
@@ -627,6 +629,13 @@ def build_kitbash_skin(
     merged = graft_head(body_dff, head_dff)
     merged['stats']['body_head_accessory_faces_removed'] = accessory_faces_removed
 
+    tone_audit = {'enabled': False}
+    if match_body_skin_to_head:
+        original_atlas = splice_atlas(head_txd, body_txd, atlas_size=atlas_size)[0]
+        body_txd, tone_mask, tone_audit = match_body_skin(body_txd, head_txd, load_profile(head_model, body_model))
+        tone_audit['enabled'] = True
+        Image.fromarray((tone_mask*255).astype(np.uint8)).save(os.path.join(outdir, f'{skin_name}_body_skin_mask.png'))
+
     atlas_rgb, uv_mapping = splice_atlas(head_txd, body_txd, atlas_size=atlas_size)
     donor_mask = np.asarray(merged["is_donor"])
     merged_uvs = np.asarray(merged["uvs"]).copy()
@@ -635,7 +644,26 @@ def build_kitbash_skin(
     merged["uvs"] = merged_uvs
 
     # PS2 dynamic range `[12, 235]` + 256-color median cut (Floyd-Steinberg dithered).
-    _pal, rgba = apply_ps2_color_pipeline(atlas_rgb, target_size=atlas_size, colors=256)
+    if match_body_skin_to_head:
+        _, baseline_rgba = apply_ps2_color_pipeline(original_atlas, target_size=atlas_size, colors=256)
+        atlas_mask = np.zeros((atlas_size[1], atlas_size[0]), dtype=bool)
+        body_x = head_txd.shape[1]
+        atlas_mask[:body_txd.shape[0], body_x:body_x+body_txd.shape[1]] = tone_mask
+        skin_palette = palette_for_skin_edit(baseline_rgba, atlas_rgb, atlas_mask)
+        _pal, rgba = apply_ps2_color_pipeline(atlas_rgb, target_size=atlas_size, colors=256, palette=skin_palette)
+        # Reserve exact head/clothing colors and restore protected pixels after
+        # quantization, so recoloring cannot move those colors or diffuse noise.
+        locked = np.array(rgba)
+        baseline = np.array(baseline_rgba)
+        locked[~atlas_mask] = baseline[~atlas_mask]
+        rgba = Image.fromarray(locked)
+        tone_audit['final_atlas_head_pixels_changed'] = int(np.any(locked[:, :body_x] != baseline[:, :body_x], axis=2).sum())
+        tone_audit['final_atlas_non_skin_pixels_changed'] = int(np.any(locked[~atlas_mask] != baseline[~atlas_mask], axis=1).sum())
+        tone_audit['final_atlas_unique_colors'] = int(len(np.unique(locked[:, :, :3].reshape(-1, 3), axis=0)))
+        with open(os.path.join(outdir, f'{skin_name}_tone_report.json'), 'w', encoding='utf-8') as report_file:
+            json.dump(tone_audit, report_file, indent=2)
+    else:
+        _pal, rgba = apply_ps2_color_pipeline(atlas_rgb, target_size=atlas_size, colors=256)
     atlas_path = os.path.join(outdir, f"{skin_name}_atlas.png")
     Image.fromarray(np.asarray(rgba)[:, :, :3]).save(atlas_path, format="PNG")
 
@@ -660,6 +688,7 @@ def build_kitbash_skin(
             "raster_format": "D3D9 8888 (vanilla ped format) with a PS2 256-color palette baked in",
         },
         "atlas_png": atlas_path,
+        "skin_tone": tone_audit,
     }
 
 
@@ -675,6 +704,7 @@ def main() -> int:
     parser.add_argument("--outdir", default=None, help="Output folder (defaults to ./output/<skin-name>)")
     parser.add_argument("--atlas-width", type=int, default=512, help="Spliced atlas width (power of two)")
     parser.add_argument("--atlas-height", type=int, default=256, help="Spliced atlas height (power of two)")
+    parser.add_argument("--match-body-skin-to-head", action="store_true", help="Match body skin to head using an inspected UV profile")
     args = parser.parse_args()
 
     outdir = args.outdir or os.path.join(".", "output", args.skin_name)
@@ -686,6 +716,7 @@ def main() -> int:
         body_model=args.body_model,
         tex_name=args.tex_name,
         atlas_size=(args.atlas_width, args.atlas_height),
+        match_body_skin_to_head=args.match_body_skin_to_head,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return 0

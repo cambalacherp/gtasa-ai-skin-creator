@@ -1,0 +1,14 @@
+{
+  "name": "sindaco_lsv2",
+  "body_model": "lsv2",
+  "head_model": "sindaco",
+  "body_dimensions": [128, 256],
+  "head_dimensions": [256, 256],
+  "body_samples": [[111, 72, 122, 96], [76, 74, 89, 92], [0, 70, 9, 95]],
+  "head_samples": [[35, 153, 58, 174], [35, 165, 60, 183]],
+  "skin_regions": [[68, 28, 128, 170], [52, 150, 68, 164]],
+  "skin_chroma_regions": [[0, 0, 33, 128], [52, 170, 128, 256]],
+  "minimum_red_green": 10,
+  "minimum_green_blue": 8,
+  "notes": "UV-space boxes are specific to vanilla LSV2/Sindaco. Arms/hands are full skin islands; chest/neck and old-head transition islands use chroma masks to protect the shirt and hair. Shadows/tattoo detail are preserved by multiplicative channel gains with reduced correction in dark ink."
+}
