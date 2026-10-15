@@ -37,10 +37,46 @@ class StreamRegressions(unittest.TestCase):
         idx = payload + 4 + data[payload+1]
         weights = idx + len(self.mesh['vertices']) * 4
         edit(data, idx, weights)
+        return self.audit_bytes(data)
+
+    def audit_bytes(self, data):
         with tempfile.TemporaryDirectory(dir=self.output.parent) as tmp:
             path = Path(tmp) / 'mutated.dff'
             path.write_bytes(data)
             return audit_dff_file(str(path))
+
+    def test_reject_clump_declaring_nonexistent_lights_and_cameras(self):
+        data = bytearray(self.data)
+        struct.pack_into('<III', data, 24, 1, 12, 0x1803FFFF)
+        result = self.audit_bytes(data)
+        self.assertTrue(any('zero lights and cameras' in e for e in result['errors']), result)
+
+    def test_reject_mismatched_clump_atomic_count(self):
+        data = bytearray(self.data)
+        struct.pack_into('<I', data, 24, 2)
+        result = self.audit_bytes(data)
+        self.assertTrue(any('Atomic count' in e for e in result['errors']), result)
+
+    def test_reject_invalid_material_reuse(self):
+        data = bytearray(self.data)
+        matlist = find_chunk(parse_rw_chunks(data), 0x0008)
+        table = find_chunk(matlist['children'], 0x0001)
+        struct.pack_into('<i', data, table['offset']+16, 8)
+        result = self.audit_bytes(data)
+        self.assertTrue(any('reused-material reference' in e for e in result['errors']), result)
+
+    def test_reject_truncated_file_instead_of_clamping_chunks(self):
+        result = self.audit_bytes(self.data[:-1])
+        self.assertFalse(result['valid'])
+        self.assertTrue(any('boundary' in e for e in result['errors']), result)
+
+    def test_reject_invalid_atomic_frame_reference(self):
+        data = bytearray(self.data)
+        atomic = find_chunk(parse_rw_chunks(data), 0x0014)
+        table = find_chunk(atomic['children'], 0x0001)
+        struct.pack_into('<I', data, table['offset']+12, 999)
+        result = self.audit_bytes(data)
+        self.assertTrue(any('nonexistent frame or geometry' in e for e in result['errors']), result)
 
     def test_actual_skin_and_legitimate_pelvis(self):
         report = audit_dff_file(str(self.output))

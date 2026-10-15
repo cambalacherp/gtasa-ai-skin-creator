@@ -36,15 +36,20 @@ OFFICIAL_GTASA_BONE_IDS: Set[int] = {
 CONTAINER_CHUNKS = {0x0010, 0x000E, 0x001A, 0x000F, 0x0008, 0x0007, 0x0006, 0x0014, 0x0016, 0x0015, 0x0003}
 
 
-def parse_rw_chunks(data: bytes, offset: int = 0, end: Optional[int] = None) -> List[Dict[str, object]]:
+def parse_rw_chunks(data: bytes, offset: int = 0, end: Optional[int] = None, strict: bool = False) -> List[Dict[str, object]]:
     """Recursively walk a RenderWare binary stream and return the chunk tree."""
     if end is None:
         end = len(data)
     nodes = []
     pos = offset
     while pos + 12 <= end:
+        if not any(data[pos:end]):  # IMG entries may have sector-alignment padding.
+            pos = end
+            break
         c_type, c_size, c_ver = struct.unpack_from("<III", data, pos)
         payload_start = pos + 12
+        if strict and payload_start + c_size > end:
+            raise ValueError(f'Chunk {c_type:#x} at {pos} exceeds its parent/file boundary ({end}).')
         payload_end = min(payload_start + c_size, end)
         node: Dict[str, object] = {
             "type": c_type,
@@ -57,9 +62,11 @@ def parse_rw_chunks(data: bytes, offset: int = 0, end: Optional[int] = None) -> 
             "children": [],
         }
         if c_type in CONTAINER_CHUNKS and c_size >= 12:
-            node["children"] = parse_rw_chunks(data, payload_start, payload_end)
+            node["children"] = parse_rw_chunks(data, payload_start, payload_end, strict=strict)
         nodes.append(node)
         pos = payload_end
+    if strict and pos < end and any(data[pos:end]):
+        raise ValueError(f'Truncated chunk header at {pos} (boundary {end}).')
     return nodes
 
 
@@ -71,7 +78,10 @@ def audit_dff_file(dff_path: str, max_triangles: int = 1600) -> Dict[str, object
     with open(dff_path, "rb") as f:
         data = f.read()
 
-    tree = parse_rw_chunks(data)
+    try:
+        tree = parse_rw_chunks(data, strict=True)
+    except ValueError as exc:
+        return {'valid': False, 'errors': [str(exc)], 'warnings': []}
     if not tree or tree[0]["type"] != 0x0010:
         return {"valid": False, "errors": ["File does not start with an rwID_CLUMP chunk (0x0010)."]}
 
@@ -83,6 +93,17 @@ def audit_dff_file(dff_path: str, max_triangles: int = 1600) -> Dict[str, object
     framelist = next((c for c in children if c["type"] == 0x000E), None)
     geomlist = next((c for c in children if c["type"] == 0x001A), None)
     atomics = [c for c in children if c["type"] == 0x0014]
+
+    clump_struct = next((c for c in children if c['type'] == 0x0001), None)
+    clump_counts = None
+    if clump_struct is None or len(clump_struct['payload']) != 12:
+        errors.append('Clump Struct must contain exactly three u32 counts (Atomics, lights, cameras).')
+    else:
+        clump_counts = struct.unpack('<III', clump_struct['payload'])
+        if clump_counts[0] != len(atomics):
+            errors.append('Clump Atomic count does not match actual Atomic chunks.')
+        if clump_counts[1:] != (0, 0):
+            errors.append(f'Ped Clump must declare zero lights and cameras; found {clump_counts[1:]}.')
 
     if len(atomics) != 1:
         errors.append(f"A pedestrian skin must have exactly 1 Atomic (0x0014); found: {len(atomics)}.")
@@ -100,6 +121,8 @@ def audit_dff_file(dff_path: str, max_triangles: int = 1600) -> Dict[str, object
             frame_count = struct.unpack_from("<I", fl_struct["payload"], 0)[0]
         if frame_count not in (32, 33):
             errors.append(f"Expected 33 vanilla Frames (or 32 legacy Frames); found: {frame_count}.")
+        if fl_struct and len(fl_struct['payload']) != 4+56*frame_count:
+            errors.append('FrameList count does not match its transform payload size.')
 
         for ext in (c for c in framelist["children"] if c["type"] == 0x0003):
             for sub in ext["children"]:
@@ -137,6 +160,17 @@ def audit_dff_file(dff_path: str, max_triangles: int = 1600) -> Dict[str, object
         errors.append("Missing rwID_GEOMETRYLIST chunk (0x001A).")
     else:
         geoms = [c for c in geomlist["children"] if c["type"] == 0x000F]
+        gl_struct = next((c for c in geomlist['children'] if c['type'] == 0x0001), None)
+        if gl_struct is None or len(gl_struct['payload']) != 4 or struct.unpack('<I', gl_struct['payload'])[0] != len(geoms):
+            errors.append('GeometryList count does not match actual Geometry chunks.')
+        for atomic in atomics:
+            a_struct = next((c for c in atomic['children'] if c['type'] == 0x0001), None)
+            if a_struct is None or len(a_struct['payload']) != 16:
+                errors.append('Atomic Struct must contain four u32 fields.')
+            else:
+                frame_idx, geom_idx, _, _ = struct.unpack('<IIII', a_struct['payload'])
+                if frame_idx >= frame_count or geom_idx >= len(geoms):
+                    errors.append('Atomic references a nonexistent frame or geometry.')
         if len(geoms) != 1:
             errors.append(f"GeometryList must contain exactly 1 Geometry; found: {len(geoms)}.")
         else:
@@ -164,6 +198,20 @@ def audit_dff_file(dff_path: str, max_triangles: int = 1600) -> Dict[str, object
 
             matlist = next((c for c in geom["children"] if c["type"] == 0x0008), None)
             if matlist:
+                ml_struct = next((c for c in matlist['children'] if c['type'] == 0x0001), None)
+                materials = [c for c in matlist['children'] if c['type'] == 0x0007]
+                if ml_struct is None or len(ml_struct['payload']) < 4:
+                    errors.append('Missing MaterialList count/reference table.')
+                else:
+                    material_count = struct.unpack_from('<I', ml_struct['payload'])[0]
+                    if len(ml_struct['payload']) != 4+material_count*4:
+                        errors.append('MaterialList reference table size does not match its count.')
+                    else:
+                        refs = struct.unpack_from('<'+'i'*material_count, ml_struct['payload'], 4)
+                        if any(ref < -1 or ref >= slot for slot, ref in enumerate(refs)):
+                            errors.append('MaterialList contains an invalid reused-material reference; a new material uses -1.')
+                        if refs.count(-1) != len(materials):
+                            errors.append('MaterialList new-material count does not match Material chunks.')
                 for mat in (c for c in matlist["children"] if c["type"] == 0x0007):
                     for tex in (c for c in mat["children"] if c["type"] == 0x0006):
                         str_chunks = [c for c in tex["children"] if c["type"] == 0x0002]
@@ -224,6 +272,7 @@ def audit_dff_file(dff_path: str, max_triangles: int = 1600) -> Dict[str, object
         "has_normals": has_normals,
         "has_prelight": has_prelight,
         "skin_bones": skin_bones,
+        "clump_counts": clump_counts,
         "node_bone_ids": node_bone_ids,
         "referenced_textures": dff_textures,
         "errors": errors,

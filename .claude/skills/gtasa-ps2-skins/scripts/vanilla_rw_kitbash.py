@@ -54,11 +54,11 @@ IMG_SECTOR = 2048
 # Geometry flags used by every vanilla GTA:SA ped (`rpGEOMETRYNORMALS | rpGEOMETRYTEXTURED | ...`).
 PED_GEOMETRY_FLAGS = 0x00010036
 # Vanilla ped material / texture filter blocks (byte-exact copies of `lsv2.dff`).
-PED_MATLIST_STRUCT = bytes.fromhex("01000000 08000000")
+PED_MATLIST_STRUCT = struct.pack('<Ii', 1, -1)  # one new material, not a reused slot
 PED_MATERIAL_STRUCT = bytes.fromhex("00000000 ffffffff 04000000 01000000 0000803f 00000000 0000803f")
 PED_TEXTURE_STRUCT = bytes.fromhex("06110100")
 PED_EMPTY_MASK_NAME = b"\x00\x00\x00\x00"
-PED_CLUMP_STRUCT = bytes.fromhex("01000000 0c000000 ffff0318")
+PED_CLUMP_STRUCT = struct.pack('<III', 1, 0, 0)  # one Atomic, no lights or cameras
 PED_ATOMIC_STRUCT = bytes.fromhex("02000000 00000000 05000000 00000000")
 PED_RIGHT_TO_RENDER = bytes.fromhex("16010000 01000000")
 PED_PLUGIN_EXTRA = bytes.fromhex("00000000")

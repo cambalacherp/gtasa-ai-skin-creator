@@ -1,0 +1,18 @@
+{
+  "viewer": "https://gtastuff.com/viewer/",
+  "method": "Actual viewer UI file chooser and observed loaded model statistics",
+  "result": "PASS",
+  "reproduced_original_error": "Failed to load sindaco_lsv2.dff: Out of bounds at position 86089",
+  "observed_stats": {
+    "vertices": 1080,
+    "triangles": 1165,
+    "materials": 1,
+    "frames": 33
+  },
+  "sha256": {
+    "sindaco_lsv2.dff": "5e3526c200d6316f62ecef630e17620f4bbbf0bb94364045bd473f254f8932d6",
+    "sindaco_lsv2.txd": "2cc9d987679703ba48c927f423a84249faca2c1e440638c8ee5aeb20c4e0fad6"
+  },
+  "geometry_uv_weights_and_texture_unchanged": true,
+  "in_game_tested": false
+}
