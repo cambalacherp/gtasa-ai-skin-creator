@@ -9,7 +9,7 @@ Inspired by the classic-modding AI tool architecture created by [Dryxio](https:/
 ### Required Deliverables for Every Skin Request
 1. **`output/<skin_name>/<skin_name>.dff`**: Unified geometry and a 32-bone skeleton exported via the vanilla stream packer or Blender CLI (`bpy`) + [DragonFF](https://github.com/Parik27/DragonFF) with library stamp `0x1803FFFF` (GTA:SA PC / RenderWare 3.6.0.3).
 2. **`output/<skin_name>/<skin_name>.txd`**: Native texture dictionary (`0x1803FFFF`, D3D9 PC) compatible with [Magic.TXD](https://github.com/FrannDzs/Magic.TXD), whose images have been quantized to an 8-bit palette (256 colors) and compressed in dynamic range to replicate the PS2 rasterizer.
-3. **`output/<skin_name>/<skin_name>_vibe_sheet.png`**: Multi-angle contact sheet (`Front`, `Side`, `Back`, `3/4`, and `Pose Test`) rendered from the exported DFF/TXD by `scripts/render_ps2_vibesheet.py` for visual self-critique of the model.
+3. **`output/<skin_name>/<skin_name>_vibe_sheet.png`**: Multi-angle contact sheet (`Front`, `Side`, `Back`, `3/4`, and `Pose Test`) captured from the exported DFF/TXD by local Blender CLI via `scripts/render_blender_cli.py` (never an image generation API) for visual self-critique of the model.
 4. **`output/<skin_name>/<skin_name>_report.json`**: Binary certificate issued by `scripts/validate_rw_stream.py`, together with the Pawn `AddCharModel` block ready for `open.mp` / SA-MP servers.
 
 ## 2. Specificity Router and Customization Interview Protocol for Generic Prompts
@@ -44,7 +44,7 @@ If the user sends an open request (e.g. *"Create a skin for my SA-MP Russian maf
 | `scripts/sync_agent_harnesses.py` | Synchronizer that regenerates every harness mirror from the canonical sources; `--check` audits for drift | `python3 scripts/sync_agent_harnesses.py [--check]` |
 | `scripts/build_ps2_rig_bpy.py` | Blender (`bpy`) generator for the official 32-bone rig, surgical *kitbashing* engine (`head-swap`, `hood-down`, `uv-remap`), weight sanitizer, and [DragonFF](https://github.com/Parik27/DragonFF) exporter | `blender -b -P scripts/build_ps2_rig_bpy.py -- --preset <preset_id> --outdir output/<id>` |
 | `scripts/vanilla_rw_kitbash.py` | Real vanilla IMG extraction, head graft, original body skeleton and texture atlas | `python scripts/vanilla_rw_kitbash.py --game-dir "C:/Juegos/gta clean" --head-model sindaco --body-model lsv2 --skin-name sindaco_lsv2 --outdir output/sindaco_lsv2` |
-| `scripts/render_ps2_vibesheet.py` | Textured z-buffer renderer; five views and hierarchical weighted pose from actual DFF/TXD | `python scripts/render_ps2_vibesheet.py --dff output/sindaco_lsv2/sindaco_lsv2.dff --txd output/sindaco_lsv2/sindaco_lsv2.txd --output output/sindaco_lsv2/sindaco_lsv2_vibe_sheet.png` |
+| `scripts/render_blender_cli.py` | Local Blender CLI renderer; actual DFF/TXD, five views, neck closeups and editable .blend | `python scripts/render_blender_cli.py --dff output/sindaco_lsv2/sindaco_lsv2.dff --txd output/sindaco_lsv2/sindaco_lsv2.txd --output output/sindaco_lsv2/sindaco_lsv2_vibe_sheet.png` |
 | `scripts/quantize_ps2_txd.py` | Vanilla atlas compositor (head grafts, tees, jeans, and skin-tone matching), 256-color PS2 quantizer, and binary `.txd` compiler (`0x1803FFFF`) | `python3 scripts/quantize_ps2_txd.py --preset <preset_id> --output output/<id>/<id>.txd` |
 | `scripts/validate_rw_stream.py` | Binary analyzer of `.dff` and `.txd` chunks (`Clump`, `FrameList`, `HAnim PLG`, `Skin PLG`, `TextureNative`) and Pawn code generator | `python3 scripts/validate_rw_stream.py --dff output/<id>/<id>.dff --txd output/<id>/<id>.txd` |
 | `scripts/run_kitbash_suite.py` | Test orchestrator that compiles, audits, and generates `artconfig.txt` | `python3 scripts/run_kitbash_suite.py ./output_kitbash_suite` |
@@ -118,9 +118,9 @@ The following table is read from vanilla LSV2. Root (Bone ID 0) must have zero w
 
 ### Recipe D: Real Vanilla Head Graft (`sindaco_lsv2`)
 - Sources: Sindaco head (ID 119), LSV2 body (ID 109); custom ID 20004.
-- Use `vanilla_rw_kitbash.py`, not the procedural proxy presets. Keep only complete triangles on each half, scale the donor head against the removed body head (1.08558 for this pair), and seat its lower lip 0.018 m inside the body neck. Transfer neck weights to the overlapping lip and recompute normals. Do not force topological welding across duplicated vanilla UV seams.
+- Use `vanilla_rw_kitbash.py`, not the procedural proxy presets. Preserve the 20 cervical transition triangles after removing the old bandana tail. Scale the donor skull against the removed skull (1.08558) and retain the original crown height (mesh X=0.86963618). Fit the 18 neck endpoints just under the donor surface to hide old-head scraps. Keep the original neck and head weights. Never align the chin to the shirt collar or sink the head into the torso. Output: 1,080 vertices / 1,165 triangles.
 - Preserve the body FrameList, HAnim node ordering and inverse bind matrices. Pack one textured Atomic, a D3D9 8888 atlas with a baked 256-color palette, and RenderWare stamp `0x1803FFFF`.
-- Run the renderer and binary validator after rebuilding. A binary PASS and a diagnostic pose are not evidence of an in-game runtime test.
+- Render real screenshots with local Blender CLI after rebuilding, including front/side neck closeups. Do not use image generation models for previews. Run the binary validator. A binary PASS and a diagnostic pose are not evidence of an in-game runtime test.
 
 ## 7. Harness Entry Points, Mirrors, and Drift Control
 

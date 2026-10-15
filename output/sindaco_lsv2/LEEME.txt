@@ -1,7 +1,7 @@
 SINDACO + LSV2
 
 Cabeza de Sindaco (119), cuerpo de LSV2 (109), geometria y texturas vanilla.
-1050 vertices, 1145 triangulos, 32 huesos, 1 Atomic.
+1080 vertices, 1165 triangulos, 32 huesos, 1 Atomic.
 
 open.mp / SA-MP 0.3.DL:
 1. Copiar sindaco_lsv2.dff y sindaco_lsv2.txd a la carpeta models del servidor.
@@ -12,6 +12,7 @@ open.mp / SA-MP 0.3.DL:
 Reemplazo local opcional: instalar una copia de ambos archivos como lsv2.dff
 y lsv2.txd mediante un modloader compatible; conservar los originales.
 
-Verificacion: auditoria binaria PASS, seis pruebas de regresion y vista previa
-texturizada del DFF/TXD. Pose Test aplica rotaciones a huesos con los pesos
+Verificacion: auditoria binaria PASS, siete pruebas de regresion y capturas
+reales del DFF/TXD con Blender CLI local. Se incluye la escena .blend.
+Pose Test aplica rotaciones a huesos con los pesos
 exportados. No se realizo una prueba dentro del juego.

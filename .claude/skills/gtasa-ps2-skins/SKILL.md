@@ -22,4 +22,10 @@ Design, model, surgically kitbash, and compile pedestrian skins (peds) for Grand
 
 For a named vanilla head/body pair, use `scripts/vanilla_rw_kitbash.py` with `--game-dir`, `--head-model`, `--body-model`, `--skin-name` and `--outdir`. This preserves the real meshes, UVs and the body's 33-frame / 32-node rig. The older procedural preset generator is a proxy path.
 
-Render the actual exported files with `python scripts/render_ps2_vibesheet.py --dff <skin>.dff --txd <skin>.txd --output <skin>_vibe_sheet.png`. This produces Front, Side, Back, 3/4 and a weighted diagnostic Pose Test. Validate with the requested `--base-skin-id` and `--custom-skin-id`; report binary/visual checks separately from in-game testing.
+Render the actual exported files with `python scripts/render_blender_cli.py --dff <skin>.dff --txd <skin>.txd --output <skin>_vibe_sheet.png`. This produces Front, Side, Back, 3/4 and a weighted diagnostic Pose Test. Validate with the requested `--base-skin-id` and `--custom-skin-id`; report binary/visual checks separately from in-game testing.
+
+## Mandatory preview and neck-fit checks
+
+- Render screenshots locally with Blender CLI (`--background --python scripts/render_blender_worker.py` via `render_blender_cli.py`). Never call an AI image generation service to preview a skin. Keep the raw screenshots and `.blend` scene.
+- Preserve mixed body neck/head triangles and original head height; aligning the donor chin to the shirt collar removes the visible neck. Do not sink the skull to conceal a missing cervical transition.
+- Inspect front and side neck closeups, including the nape for remaining original-head scraps, before delivery. Binary PASS alone is insufficient.
