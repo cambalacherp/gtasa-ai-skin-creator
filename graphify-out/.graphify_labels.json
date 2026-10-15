@@ -7,6 +7,7 @@
   "5": ".claude/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py",
   "6": "scripts/sync_agent_harnesses.py",
   "7": "scripts/vanilla_rw_kitbash.py",
+  "8": "main",
   "9": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
   "10": "bmypol1_tenpenny Texture Atlas (256x256 PS2 Ped Skin)",
   "11": "wmydrug_sindacco Texture Atlas (256x256 PS2 Ped Skin)",
@@ -16,8 +17,6 @@
   "15": "Dryxio gta-3d-ai Toolchain (GTA Scout, Ariane, GTA Stuff)",
   "16": ".claude/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
   "17": "HANDOFF — Skin `sindaco_lsv2` (cabeza `sindaco` + cuerpo `lsv2`)",
-  "18": "process_and_pack_ps2_txd",
-  "19": "apply_ps2_color_pipeline",
   "20": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_worker.py",
   "21": ".claude/skills/gtasa-ps2-skins/scripts/render_blender_worker.py",
   "22": "scripts/render_blender_worker.py"

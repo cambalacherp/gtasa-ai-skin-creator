@@ -220,6 +220,78 @@
       "source_location": "L378"
     },
     {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_apply_ps2_color_pipeline",
+      "label": "apply_ps2_color_pipeline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "apply_ps2_color_pipeline()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L174"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_build_gtasa_pc_txd_bytes",
+      "label": "build_gtasa_pc_txd_bytes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "build_gtasa_pc_txd_bytes()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L204"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_generate_kitbash_atlas",
+      "label": "generate_kitbash_atlas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "generate_kitbash_atlas()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L308"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_process_and_pack_ps2_txd",
+      "label": "process_and_pack_ps2_txd()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "process_and_pack_ps2_txd()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L265"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rw_chunk",
+      "label": "_rw_chunk()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "_rw_chunk()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L39"
+    },
+    {
       "id": "claude_skills_gtasa_ps2_skins_scripts_run_kitbash_suite_run_all_kitbash_tests",
       "label": "run_all_kitbash_tests()",
       "_callable": true,
@@ -242,6 +314,18 @@
       "norm_label": "find_chunk()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
       "source_location": "L17"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "label": ".audit_bytes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".audit_bytes()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L42"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_mutation",
@@ -277,7 +361,7 @@
       "file_type": "code",
       "norm_label": ".test_actual_skin_and_legitimate_pelvis()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L45"
+      "source_location": "L81"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_head_keeps_original_crown_height_and_visible_neck",
@@ -289,7 +373,7 @@
       "file_type": "code",
       "norm_label": ".test_head_keeps_original_crown_height_and_visible_neck()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L52"
+      "source_location": "L88"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_legacy_writer_geometry_offsets",
@@ -301,7 +385,31 @@
       "file_type": "code",
       "norm_label": ".test_legacy_writer_geometry_offsets()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L103"
+      "source_location": "L139"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "label": ".test_reject_clump_declaring_nonexistent_lights_and_cameras()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_clump_declaring_nonexistent_lights_and_cameras()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L48"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "label": ".test_reject_invalid_atomic_frame_reference()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_invalid_atomic_frame_reference()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L73"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
@@ -313,7 +421,31 @@
       "file_type": "code",
       "norm_label": ".test_reject_invalid_index()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L91"
+      "source_location": "L127"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "label": ".test_reject_invalid_material_reuse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_invalid_material_reuse()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "label": ".test_reject_mismatched_clump_atomic_count()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_mismatched_clump_atomic_count()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L54"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
@@ -325,7 +457,7 @@
       "file_type": "code",
       "norm_label": ".test_reject_nan_weight()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L95"
+      "source_location": "L131"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
@@ -337,7 +469,7 @@
       "file_type": "code",
       "norm_label": ".test_reject_negative_weights_even_with_unit_sum()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L99"
+      "source_location": "L135"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
@@ -349,7 +481,19 @@
       "file_type": "code",
       "norm_label": ".test_reject_root_weight()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L87"
+      "source_location": "L123"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "label": ".test_reject_truncated_file_instead_of_clamping_chunks()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_truncated_file_instead_of_clamping_chunks()",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L68"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_dff_file",
@@ -361,7 +505,7 @@
       "file_type": "code",
       "norm_label": "audit_dff_file()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L66"
+      "source_location": "L73"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_txd_file",
@@ -373,7 +517,7 @@
       "file_type": "code",
       "norm_label": "audit_txd_file()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L234"
+      "source_location": "L283"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_main",
@@ -385,7 +529,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L280"
+      "source_location": "L329"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_parse_rw_chunks",
@@ -472,6 +616,66 @@
       "source_location": "L378"
     },
     {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_build_gtasa_pc_txd_bytes",
+      "label": "build_gtasa_pc_txd_bytes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "build_gtasa_pc_txd_bytes()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L204"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_generate_kitbash_atlas",
+      "label": "generate_kitbash_atlas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "generate_kitbash_atlas()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L308"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_process_and_pack_ps2_txd",
+      "label": "process_and_pack_ps2_txd()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "process_and_pack_ps2_txd()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L265"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rw_chunk",
+      "label": "_rw_chunk()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "_rw_chunk()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L39"
+    },
+    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_run_kitbash_suite_run_all_kitbash_tests",
       "label": "run_all_kitbash_tests()",
       "_callable": true,
@@ -494,6 +698,18 @@
       "norm_label": "find_chunk()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
       "source_location": "L17"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "label": ".audit_bytes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".audit_bytes()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L42"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_mutation",
@@ -529,7 +745,7 @@
       "file_type": "code",
       "norm_label": ".test_actual_skin_and_legitimate_pelvis()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L45"
+      "source_location": "L81"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_head_keeps_original_crown_height_and_visible_neck",
@@ -541,7 +757,7 @@
       "file_type": "code",
       "norm_label": ".test_head_keeps_original_crown_height_and_visible_neck()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L52"
+      "source_location": "L88"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_legacy_writer_geometry_offsets",
@@ -553,7 +769,31 @@
       "file_type": "code",
       "norm_label": ".test_legacy_writer_geometry_offsets()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L103"
+      "source_location": "L139"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "label": ".test_reject_clump_declaring_nonexistent_lights_and_cameras()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_clump_declaring_nonexistent_lights_and_cameras()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L48"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "label": ".test_reject_invalid_atomic_frame_reference()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_invalid_atomic_frame_reference()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L73"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
@@ -565,7 +805,31 @@
       "file_type": "code",
       "norm_label": ".test_reject_invalid_index()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L91"
+      "source_location": "L127"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "label": ".test_reject_invalid_material_reuse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_invalid_material_reuse()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "label": ".test_reject_mismatched_clump_atomic_count()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_mismatched_clump_atomic_count()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L54"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
@@ -577,7 +841,7 @@
       "file_type": "code",
       "norm_label": ".test_reject_nan_weight()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L95"
+      "source_location": "L131"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
@@ -589,7 +853,7 @@
       "file_type": "code",
       "norm_label": ".test_reject_negative_weights_even_with_unit_sum()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L99"
+      "source_location": "L135"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
@@ -601,7 +865,19 @@
       "file_type": "code",
       "norm_label": ".test_reject_root_weight()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L87"
+      "source_location": "L123"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "label": ".test_reject_truncated_file_instead_of_clamping_chunks()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_truncated_file_instead_of_clamping_chunks()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L68"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_dff_file",
@@ -613,7 +889,7 @@
       "file_type": "code",
       "norm_label": "audit_dff_file()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L66"
+      "source_location": "L73"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_txd_file",
@@ -625,7 +901,7 @@
       "file_type": "code",
       "norm_label": "audit_txd_file()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L234"
+      "source_location": "L283"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_main",
@@ -637,7 +913,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L280"
+      "source_location": "L329"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_parse_rw_chunks",
@@ -650,6 +926,18 @@
       "norm_label": "parse_rw_chunks()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
       "source_location": "L39"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_parse_ped_dff",
+      "label": "parse_ped_dff()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "parse_ped_dff()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
+      "source_location": "L122"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_match_skin_tone_load_profile",
@@ -745,7 +1033,7 @@
       "file_type": "code",
       "norm_label": ".test_body_skin_matches_head_in_exported_txd()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L57"
+      "source_location": "L93"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
@@ -757,7 +1045,7 @@
       "file_type": "code",
       "norm_label": ".test_exported_head_and_non_skin_pixels_remain_identical()",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L65"
+      "source_location": "L101"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_build_kitbash_skin",
@@ -976,138 +1264,6 @@
       "source_location": "L504"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_build_gtasa_pc_txd_bytes",
-      "label": "build_gtasa_pc_txd_bytes()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": "build_gtasa_pc_txd_bytes()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L204"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_generate_kitbash_atlas",
-      "label": "generate_kitbash_atlas()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": "generate_kitbash_atlas()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L44"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L308"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_process_and_pack_ps2_txd",
-      "label": "process_and_pack_ps2_txd()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": "process_and_pack_ps2_txd()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L265"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rw_chunk",
-      "label": "_rw_chunk()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": "_rw_chunk()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L39"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_apply_ps2_color_pipeline",
-      "label": "apply_ps2_color_pipeline()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "apply_ps2_color_pipeline()",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L174"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_build_gtasa_pc_txd_bytes",
-      "label": "build_gtasa_pc_txd_bytes()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "build_gtasa_pc_txd_bytes()",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L204"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_generate_kitbash_atlas",
-      "label": "generate_kitbash_atlas()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "generate_kitbash_atlas()",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L44"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L308"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_process_and_pack_ps2_txd",
-      "label": "process_and_pack_ps2_txd()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "process_and_pack_ps2_txd()",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L265"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rw_chunk",
-      "label": "_rw_chunk()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "_rw_chunk()",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L39"
-    },
-    {
       "id": "scripts_build_ps2_rig_bpy_append_prism_ring_segment",
       "label": "_append_prism_ring_segment()",
       "_callable": true,
@@ -1178,6 +1334,18 @@
       "norm_label": "write_standalone_gtasa_ped_dff()",
       "source_file": "scripts/build_ps2_rig_bpy.py",
       "source_location": "L378"
+    },
+    {
+      "id": "scripts_quantize_ps2_txd_apply_ps2_color_pipeline",
+      "label": "apply_ps2_color_pipeline()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "apply_ps2_color_pipeline()",
+      "source_file": "scripts/quantize_ps2_txd.py",
+      "source_location": "L174"
     },
     {
       "id": "scripts_quantize_ps2_txd_build_gtasa_pc_txd_bytes",
@@ -1264,6 +1432,18 @@
       "source_location": "L17"
     },
     {
+      "id": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "label": ".audit_bytes()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".audit_bytes()",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L42"
+    },
+    {
       "id": "scripts_test_rw_regressions_streamregressions_audit_mutation",
       "label": ".audit_mutation()",
       "_callable": true,
@@ -1297,7 +1477,7 @@
       "file_type": "code",
       "norm_label": ".test_actual_skin_and_legitimate_pelvis()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L45"
+      "source_location": "L81"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_head_keeps_original_crown_height_and_visible_neck",
@@ -1309,7 +1489,7 @@
       "file_type": "code",
       "norm_label": ".test_head_keeps_original_crown_height_and_visible_neck()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L52"
+      "source_location": "L88"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_legacy_writer_geometry_offsets",
@@ -1321,7 +1501,31 @@
       "file_type": "code",
       "norm_label": ".test_legacy_writer_geometry_offsets()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L103"
+      "source_location": "L139"
+    },
+    {
+      "id": "scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "label": ".test_reject_clump_declaring_nonexistent_lights_and_cameras()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_clump_declaring_nonexistent_lights_and_cameras()",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L48"
+    },
+    {
+      "id": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "label": ".test_reject_invalid_atomic_frame_reference()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_invalid_atomic_frame_reference()",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L73"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
@@ -1333,7 +1537,31 @@
       "file_type": "code",
       "norm_label": ".test_reject_invalid_index()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L91"
+      "source_location": "L127"
+    },
+    {
+      "id": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "label": ".test_reject_invalid_material_reuse()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_invalid_material_reuse()",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "label": ".test_reject_mismatched_clump_atomic_count()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_mismatched_clump_atomic_count()",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L54"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
@@ -1345,7 +1573,7 @@
       "file_type": "code",
       "norm_label": ".test_reject_nan_weight()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L95"
+      "source_location": "L131"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
@@ -1357,7 +1585,7 @@
       "file_type": "code",
       "norm_label": ".test_reject_negative_weights_even_with_unit_sum()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L99"
+      "source_location": "L135"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
@@ -1369,7 +1597,19 @@
       "file_type": "code",
       "norm_label": ".test_reject_root_weight()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L87"
+      "source_location": "L123"
+    },
+    {
+      "id": "scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "label": ".test_reject_truncated_file_instead_of_clamping_chunks()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".test_reject_truncated_file_instead_of_clamping_chunks()",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L68"
     },
     {
       "id": "scripts_validate_rw_stream_audit_dff_file",
@@ -1381,7 +1621,7 @@
       "file_type": "code",
       "norm_label": "audit_dff_file()",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L66"
+      "source_location": "L73"
     },
     {
       "id": "scripts_validate_rw_stream_audit_txd_file",
@@ -1393,7 +1633,7 @@
       "file_type": "code",
       "norm_label": "audit_txd_file()",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L234"
+      "source_location": "L283"
     },
     {
       "id": "scripts_validate_rw_stream_main",
@@ -1405,7 +1645,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L280"
+      "source_location": "L329"
     },
     {
       "id": "scripts_validate_rw_stream_parse_rw_chunks",
@@ -1792,18 +2032,6 @@
       "source_location": "L23"
     },
     {
-      "id": "scripts_quantize_ps2_txd_apply_ps2_color_pipeline",
-      "label": "apply_ps2_color_pipeline()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "scripts/vanilla_rw_kitbash.py",
-      "file_type": "code",
-      "norm_label": "apply_ps2_color_pipeline()",
-      "source_file": "scripts/quantize_ps2_txd.py",
-      "source_location": "L174"
-    },
-    {
       "id": "scripts_render_blender_cli_main",
       "label": "main()",
       "_callable": true,
@@ -1849,7 +2077,7 @@
       "file_type": "code",
       "norm_label": ".test_body_skin_matches_head_in_exported_txd()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L57"
+      "source_location": "L93"
     },
     {
       "id": "scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
@@ -1861,7 +2089,7 @@
       "file_type": "code",
       "norm_label": ".test_exported_head_and_non_skin_pixels_remain_identical()",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L65"
+      "source_location": "L101"
     },
     {
       "id": "scripts_vanilla_rw_kitbash_build_kitbash_skin",
@@ -2080,6 +2308,42 @@
       "source_location": "L504"
     },
     {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_render_blender_cli_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "main",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "main",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_posed_vertices",
+      "label": "posed_vertices()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "main",
+      "file_type": "code",
+      "norm_label": "posed_vertices()",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
+      "source_location": "L7"
+    },
+    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_match_skin_tone_load_profile",
       "label": "load_profile()",
       "_callable": true,
@@ -2140,42 +2404,6 @@
       "source_location": "L174"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_render_blender_cli_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
-      "source_location": "L14"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
-      "source_location": "L49"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_posed_vertices",
-      "label": "posed_vertices()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "code",
-      "norm_label": "posed_vertices()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
-      "source_location": "L7"
-    },
-    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_body_skin_matches_head_in_exported_txd",
       "label": ".test_body_skin_matches_head_in_exported_txd()",
       "_callable": true,
@@ -2185,7 +2413,7 @@
       "file_type": "code",
       "norm_label": ".test_body_skin_matches_head_in_exported_txd()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L57"
+      "source_location": "L93"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
@@ -2197,7 +2425,7 @@
       "file_type": "code",
       "norm_label": ".test_exported_head_and_non_skin_pixels_remain_identical()",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L65"
+      "source_location": "L101"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_build_kitbash_skin",
@@ -2320,18 +2548,6 @@
       "source_location": "L97"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_parse_ped_dff",
-      "label": "parse_ped_dff()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "code",
-      "norm_label": "parse_ped_dff()",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "source_location": "L122"
-    },
-    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_read_txd_textures",
       "label": "read_txd_textures()",
       "_callable": true,
@@ -2438,6 +2654,28 @@
       "source_location": ""
     },
     {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd",
+      "label": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_py_image",
+      "label": "Image",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "image",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "claude_skills_gtasa_ps2_skins_scripts_run_kitbash_suite",
       "label": ".claude/skills/gtasa-ps2-skins/scripts/run_kitbash_suite.py",
       "_origin": "ast",
@@ -2504,7 +2742,62 @@
       "source_location": "L383"
     },
     {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_235",
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_182",
+      "label": "Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "resize, compress levels to `[12, 235]`, and quantize to 256 colors with floyd-...",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L182"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_210",
+      "label": "Build a native `.txd` (`rwID_TEXDICTIONARY = 0x0016`) for GTA:SA PC\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "build a native `.txd` (`rwid_texdictionary = 0x0016`) for gta:sa pc...",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L210"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_274",
+      "label": "Run atlas splicing/composition, PS2 quantization, and `.txd` packing.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "run atlas splicing/composition, ps2 quantization, and `.txd` packing.",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L274"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_40",
+      "label": "Pack a 12-byte RenderWare header (`type`, `size`, `version`) plus payload.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "pack a 12-byte renderware header (`type`, `size`, `version`) plus payload.",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_45",
+      "label": "Generate the `256x256` Rockstar North (2004) style texture atlas for the\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "generate the `256x256` rockstar north (2004) style texture atlas for the...",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_284",
       "label": "Audit a `.txd` file, checking native textures, PS2 resolutions, and formats.",
       "_origin": "ast",
       "community": 0,
@@ -2512,7 +2805,7 @@
       "file_type": "rationale",
       "norm_label": "audit a `.txd` file, checking native textures, ps2 resolutions, and formats.",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L235"
+      "source_location": "L284"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_40",
@@ -2526,7 +2819,7 @@
       "source_location": "L40"
     },
     {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_67",
+      "id": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_74",
       "label": "Audit every critical chunk in a GTA: San Andreas pedestrian `.dff` file.",
       "_origin": "ast",
       "community": 0,
@@ -2534,7 +2827,7 @@
       "file_type": "rationale",
       "norm_label": "audit every critical chunk in a gta: san andreas pedestrian `.dff` file.",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L67"
+      "source_location": "L74"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_build_ps2_rig_bpy",
@@ -2559,6 +2852,28 @@
       "source_location": ""
     },
     {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd",
+      "label": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_py_image",
+      "label": "Image",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": "image",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_run_kitbash_suite",
       "label": ".agents/skills/gtasa-ps2-skins/scripts/run_kitbash_suite.py",
       "_origin": "ast",
@@ -2567,6 +2882,17 @@
       "file_type": "code",
       "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/run_kitbash_suite.py",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/run_kitbash_suite.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions",
+      "label": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "code",
+      "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
       "source_location": "L1"
     },
     {
@@ -2625,7 +2951,62 @@
       "source_location": "L383"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_235",
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_210",
+      "label": "Build a native `.txd` (`rwID_TEXDICTIONARY = 0x0016`) for GTA:SA PC\u2026",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "build a native `.txd` (`rwid_texdictionary = 0x0016`) for gta:sa pc...",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L210"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_274",
+      "label": "Run atlas splicing/composition, PS2 quantization, and `.txd` packing.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "run atlas splicing/composition, ps2 quantization, and `.txd` packing.",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L274"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_40",
+      "label": "Pack a 12-byte RenderWare header (`type`, `size`, `version`) plus payload.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "pack a 12-byte renderware header (`type`, `size`, `version`) plus payload.",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L40"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_45",
+      "label": "Generate the `256x256` Rockstar North (2004) style texture atlas for the\u2026",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "generate the `256x256` rockstar north (2004) style texture atlas for the...",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_rationale_1",
+      "label": "Regression checks against the real exported skin and corrupted weight streams.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "regression checks against the real exported skin and corrupted weight streams.",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_284",
       "label": "Audit a `.txd` file, checking native textures, PS2 resolutions, and formats.",
       "_origin": "ast",
       "community": 1,
@@ -2633,7 +3014,7 @@
       "file_type": "rationale",
       "norm_label": "audit a `.txd` file, checking native textures, ps2 resolutions, and formats.",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L235"
+      "source_location": "L284"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_40",
@@ -2647,7 +3028,7 @@
       "source_location": "L40"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_67",
+      "id": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_74",
       "label": "Audit every critical chunk in a GTA: San Andreas pedestrian `.dff` file.",
       "_origin": "ast",
       "community": 1,
@@ -2655,7 +3036,18 @@
       "file_type": "rationale",
       "norm_label": "audit every critical chunk in a gta: san andreas pedestrian `.dff` file.",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L67"
+      "source_location": "L74"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_rationale_123",
+      "label": "Parse a GTA:SA pedestrian `.dff` into geometry, skeleton, and skinning arrays.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "parse a gta:sa pedestrian `.dff` into geometry, skeleton, and skinning arrays.",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
+      "source_location": "L123"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_scripts_match_skin_tone",
@@ -3182,149 +3574,6 @@
       "source_location": "L210"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd",
-      "label": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_py_image",
-      "label": "Image",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "code",
-      "norm_label": "image",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_210",
-      "label": "Build a native `.txd` (`rwID_TEXDICTIONARY = 0x0016`) for GTA:SA PC\u2026",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "rationale",
-      "norm_label": "build a native `.txd` (`rwid_texdictionary = 0x0016`) for gta:sa pc...",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L210"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_274",
-      "label": "Run atlas splicing/composition, PS2 quantization, and `.txd` packing.",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "rationale",
-      "norm_label": "run atlas splicing/composition, ps2 quantization, and `.txd` packing.",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L274"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_40",
-      "label": "Pack a 12-byte RenderWare header (`type`, `size`, `version`) plus payload.",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "rationale",
-      "norm_label": "pack a 12-byte renderware header (`type`, `size`, `version`) plus payload.",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L40"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_45",
-      "label": "Generate the `256x256` Rockstar North (2004) style texture atlas for the\u2026",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "process_and_pack_ps2_txd",
-      "file_type": "rationale",
-      "norm_label": "generate the `256x256` rockstar north (2004) style texture atlas for the...",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L45"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd",
-      "label": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_py_image",
-      "label": "Image",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "code",
-      "norm_label": "image",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_182",
-      "label": "Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-\u2026",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "rationale",
-      "norm_label": "resize, compress levels to `[12, 235]`, and quantize to 256 colors with floyd-...",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L182"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_210",
-      "label": "Build a native `.txd` (`rwID_TEXDICTIONARY = 0x0016`) for GTA:SA PC\u2026",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "rationale",
-      "norm_label": "build a native `.txd` (`rwid_texdictionary = 0x0016`) for gta:sa pc...",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L210"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_274",
-      "label": "Run atlas splicing/composition, PS2 quantization, and `.txd` packing.",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "rationale",
-      "norm_label": "run atlas splicing/composition, ps2 quantization, and `.txd` packing.",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L274"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_40",
-      "label": "Pack a 12-byte RenderWare header (`type`, `size`, `version`) plus payload.",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "rationale",
-      "norm_label": "pack a 12-byte renderware header (`type`, `size`, `version`) plus payload.",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L40"
-    },
-    {
-      "id": "claude_skills_gtasa_ps2_skins_scripts_quantize_ps2_txd_rationale_45",
-      "label": "Generate the `256x256` Rockstar North (2004) style texture atlas for the\u2026",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "apply_ps2_color_pipeline",
-      "file_type": "rationale",
-      "norm_label": "generate the `256x256` rockstar north (2004) style texture atlas for the...",
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py",
-      "source_location": "L45"
-    },
-    {
       "id": "scripts_build_ps2_rig_bpy",
       "label": "scripts/build_ps2_rig_bpy.py",
       "_origin": "ast",
@@ -3435,6 +3684,17 @@
       "source_location": "L383"
     },
     {
+      "id": "scripts_quantize_ps2_txd_rationale_182",
+      "label": "Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-\u2026",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "StreamRegressions",
+      "file_type": "rationale",
+      "norm_label": "resize, compress levels to `[12, 235]`, and quantize to 256 colors with floyd-...",
+      "source_file": "scripts/quantize_ps2_txd.py",
+      "source_location": "L182"
+    },
+    {
       "id": "scripts_quantize_ps2_txd_rationale_210",
       "label": "Build a native `.txd` (`rwID_TEXDICTIONARY = 0x0016`) for GTA:SA PC\u2026",
       "_origin": "ast",
@@ -3479,7 +3739,7 @@
       "source_location": "L45"
     },
     {
-      "id": "scripts_validate_rw_stream_rationale_235",
+      "id": "scripts_validate_rw_stream_rationale_284",
       "label": "Audit a `.txd` file, checking native textures, PS2 resolutions, and formats.",
       "_origin": "ast",
       "community": 2,
@@ -3487,7 +3747,7 @@
       "file_type": "rationale",
       "norm_label": "audit a `.txd` file, checking native textures, ps2 resolutions, and formats.",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L235"
+      "source_location": "L284"
     },
     {
       "id": "scripts_validate_rw_stream_rationale_40",
@@ -3501,7 +3761,7 @@
       "source_location": "L40"
     },
     {
-      "id": "scripts_validate_rw_stream_rationale_67",
+      "id": "scripts_validate_rw_stream_rationale_74",
       "label": "Audit every critical chunk in a GTA: San Andreas pedestrian `.dff` file.",
       "_origin": "ast",
       "community": 2,
@@ -3509,7 +3769,7 @@
       "file_type": "rationale",
       "norm_label": "audit every critical chunk in a gta: san andreas pedestrian `.dff` file.",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L67"
+      "source_location": "L74"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_render_blender_worker",
@@ -3599,7 +3859,7 @@
       "node_kind": "heading",
       "norm_label": "coordinates, previews and process handling",
       "source_file": ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L26"
+      "source_location": "L29"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_references_vanilla_kitbash_lessons_neck_surgery",
@@ -3623,7 +3883,7 @@
       "node_kind": "heading",
       "norm_label": "skin color matching",
       "source_file": ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L34"
+      "source_location": "L37"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_references_vanilla_kitbash_lessons_verification_and_memory",
@@ -3635,7 +3895,7 @@
       "node_kind": "heading",
       "norm_label": "verification and memory",
       "source_file": ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L43"
+      "source_location": "L46"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_references_vanilla_kitbash_lessons_verified_renderware_layout",
@@ -3683,7 +3943,7 @@
       "node_kind": "heading",
       "norm_label": "coordinates, previews and process handling",
       "source_file": ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L26"
+      "source_location": "L29"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_references_vanilla_kitbash_lessons_neck_surgery",
@@ -3707,7 +3967,7 @@
       "node_kind": "heading",
       "norm_label": "skin color matching",
       "source_file": ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L34"
+      "source_location": "L37"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_references_vanilla_kitbash_lessons_verification_and_memory",
@@ -3719,7 +3979,7 @@
       "node_kind": "heading",
       "norm_label": "verification and memory",
       "source_file": ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L43"
+      "source_location": "L46"
     },
     {
       "id": "claude_skills_gtasa_ps2_skins_references_vanilla_kitbash_lessons_verified_renderware_layout",
@@ -4109,17 +4369,6 @@
       "source_location": "L28"
     },
     {
-      "id": "scripts_quantize_ps2_txd_rationale_182",
-      "label": "Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-\u2026",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "scripts/vanilla_rw_kitbash.py",
-      "file_type": "rationale",
-      "norm_label": "resize, compress levels to `[12, 235]`, and quantize to 256 colors with floyd-...",
-      "source_file": "scripts/quantize_ps2_txd.py",
-      "source_location": "L182"
-    },
-    {
       "id": "scripts_render_blender_cli_rationale_1",
       "label": "Render real DFF/TXD geometry with local Blender CLI; no image generation API.",
       "_origin": "ast",
@@ -4329,22 +4578,11 @@
       "source_location": "L98"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_match_skin_tone",
-      "label": ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "code",
-      "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_render_blender_cli",
       "label": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
       "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
+      "community": 8,
+      "community_name": "main",
       "file_type": "code",
       "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
@@ -4354,22 +4592,55 @@
       "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet",
       "label": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
       "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
+      "community": 8,
+      "community_name": "main",
       "file_type": "code",
       "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
       "source_location": "L1"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions",
-      "label": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "id": "agents_skills_gtasa_ps2_skins_scripts_render_blender_cli_rationale_1",
+      "label": "Render real DFF/TXD geometry with local Blender CLI; no image generation API.",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "main",
+      "file_type": "rationale",
+      "norm_label": "render real dff/txd geometry with local blender cli; no image generation api.",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_rationale_1",
+      "label": "Skin pose deformation and compatibility entry point for local Blender CLI\u2026",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "main",
+      "file_type": "rationale",
+      "norm_label": "skin pose deformation and compatibility entry point for local blender cli...",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_rationale_8",
+      "label": "Apply hierarchical bone rotations around pivots from inverse bind matrices.",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "main",
+      "file_type": "rationale",
+      "norm_label": "apply hierarchical bone rotations around pivots from inverse bind matrices.",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
+      "source_location": "L8"
+    },
+    {
+      "id": "agents_skills_gtasa_ps2_skins_scripts_match_skin_tone",
+      "label": ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py",
       "_origin": "ast",
       "community": 9,
       "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
       "file_type": "code",
-      "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "norm_label": ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py",
       "source_location": "L1"
     },
     {
@@ -4439,50 +4710,6 @@
       "source_location": "L182"
     },
     {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_render_blender_cli_rationale_1",
-      "label": "Render real DFF/TXD geometry with local Blender CLI; no image generation API.",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "rationale",
-      "norm_label": "render real dff/txd geometry with local blender cli; no image generation api.",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_rationale_1",
-      "label": "Skin pose deformation and compatibility entry point for local Blender CLI\u2026",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "rationale",
-      "norm_label": "skin pose deformation and compatibility entry point for local blender cli...",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_render_ps2_vibesheet_rationale_8",
-      "label": "Apply hierarchical bone rotations around pivots from inverse bind matrices.",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "rationale",
-      "norm_label": "apply hierarchical bone rotations around pivots from inverse bind matrices.",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py",
-      "source_location": "L8"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_rationale_1",
-      "label": "Regression checks against the real exported skin and corrupted weight streams.",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "rationale",
-      "norm_label": "regression checks against the real exported skin and corrupted weight streams.",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_rationale_113",
       "label": "Read one file out of the open `.img` archive.",
       "_origin": "ast",
@@ -4492,17 +4719,6 @@
       "norm_label": "read one file out of the open `.img` archive.",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
       "source_location": "L113"
-    },
-    {
-      "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_rationale_123",
-      "label": "Parse a GTA:SA pedestrian `.dff` into geometry, skeleton, and skinning arrays.",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "file_type": "rationale",
-      "norm_label": "parse a gta:sa pedestrian `.dff` into geometry, skeleton, and skinning arrays.",
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py",
-      "source_location": "L123"
     },
     {
       "id": "agents_skills_gtasa_ps2_skins_scripts_vanilla_rw_kitbash_rationale_228",
@@ -5732,7 +5948,7 @@
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_mutation",
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
       "target": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_dff_file",
       "relation": "calls",
       "_origin": "ast",
@@ -5740,7 +5956,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L43",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_mutation",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -5788,7 +6016,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L46",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -5800,7 +6028,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L58",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -5812,7 +6040,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L59",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -5824,7 +6052,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L60",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -5836,7 +6064,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L69",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -5848,7 +6076,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L71",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -5860,7 +6088,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L71",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -5872,7 +6100,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L75",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -5884,7 +6112,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L76",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -5896,7 +6124,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L106",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -5908,7 +6136,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L107",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -5920,7 +6148,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L111",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_find_chunk",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_parse_rw_chunks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -5932,7 +6208,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L92",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_find_chunk",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_parse_rw_chunks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -5944,7 +6268,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L96",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -5956,7 +6280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L100",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -5968,7 +6292,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L88",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -5980,7 +6316,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L74",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -5992,7 +6328,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L242",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -6004,7 +6340,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L291",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -6016,7 +6352,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L292",
+      "source_location": "L341",
       "weight": 1.0
     },
     {
@@ -6596,7 +6932,7 @@
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_mutation",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
       "target": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_dff_file",
       "relation": "calls",
       "_origin": "ast",
@@ -6604,7 +6940,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L43",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_mutation",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -6652,7 +7000,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L46",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -6664,7 +7012,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L58",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -6676,7 +7024,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L59",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -6688,7 +7036,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L60",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -6700,7 +7048,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L69",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -6712,7 +7060,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L71",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -6724,7 +7072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L71",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -6736,7 +7084,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L75",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -6748,7 +7096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L76",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -6760,7 +7108,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L106",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -6772,7 +7120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L107",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -6784,7 +7132,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L111",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_find_chunk",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_parse_rw_chunks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -6796,7 +7192,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L92",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_find_chunk",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_parse_rw_chunks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -6808,7 +7252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L96",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -6820,7 +7264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L100",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -6832,7 +7276,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L88",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -6844,7 +7300,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L74",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -6856,7 +7312,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L242",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -6868,7 +7324,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L291",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -6880,7 +7336,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L292",
+      "source_location": "L341",
       "weight": 1.0
     },
     {
@@ -7460,7 +7916,7 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_test_rw_regressions_streamregressions_audit_mutation",
+      "source": "scripts_test_rw_regressions_streamregressions_audit_bytes",
       "target": "scripts_validate_rw_stream_audit_dff_file",
       "relation": "calls",
       "_origin": "ast",
@@ -7468,7 +7924,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L43",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_audit_mutation",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -7516,7 +7984,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L46",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -7528,7 +7996,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L58",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -7540,7 +8008,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L59",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -7552,7 +8020,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L60",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -7564,7 +8032,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L69",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -7576,7 +8044,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L71",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -7588,7 +8056,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L71",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -7600,7 +8068,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L75",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -7612,7 +8080,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L76",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -7624,7 +8092,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L106",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -7636,7 +8104,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L107",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -7648,7 +8116,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L111",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "scripts_test_rw_regressions_find_chunk",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "scripts_validate_rw_stream_parse_rw_chunks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -7660,7 +8176,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L92",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "scripts_test_rw_regressions_find_chunk",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "scripts_validate_rw_stream_parse_rw_chunks",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -7672,7 +8236,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L96",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -7684,7 +8248,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L100",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -7696,7 +8260,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L88",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -7708,7 +8284,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L74",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -7720,7 +8296,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L242",
+      "source_location": "L291",
       "weight": 1.0
     },
     {
@@ -7732,7 +8308,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L291",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -7744,7 +8320,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L292",
+      "source_location": "L341",
       "weight": 1.0
     },
     {
@@ -9553,7 +10129,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L26",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -9564,7 +10140,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L34",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -9575,7 +10151,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -9938,7 +10514,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L234",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -9949,7 +10525,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L280",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -9971,7 +10547,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L66",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -10202,7 +10778,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L26",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -10213,7 +10789,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L34",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -10224,7 +10800,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -10587,7 +11163,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L234",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -10598,7 +11174,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L280",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -10620,7 +11196,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L66",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -11357,7 +11933,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L234",
+      "source_location": "L283",
       "weight": 1.0
     },
     {
@@ -11368,7 +11944,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L280",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -11390,7 +11966,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L66",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -11593,13 +12169,68 @@
     },
     {
       "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
       "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_legacy_writer_geometry_offsets",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L103",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -11626,13 +12257,79 @@
     },
     {
       "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
       "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_actual_skin_and_legitimate_pelvis",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L45",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -11643,7 +12340,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L52",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -11654,62 +12351,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L57",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L65",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L87",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L91",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L95",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "agents_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L99",
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -11720,7 +12417,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L103",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -11747,13 +12444,79 @@
     },
     {
       "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
+      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
       "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_actual_skin_and_legitimate_pelvis",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L45",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -11764,7 +12527,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L52",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -11775,62 +12538,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L57",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L65",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L87",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L91",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L95",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions",
-      "target": "claude_skills_gtasa_ps2_skins_scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py",
-      "source_location": "L99",
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -11841,7 +12604,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L103",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -11868,13 +12631,79 @@
     },
     {
       "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_audit_bytes",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_clump_declaring_nonexistent_lights_and_cameras",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_mismatched_clump_atomic_count",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_material_reuse",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_truncated_file_instead_of_clamping_chunks",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions",
+      "target": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_atomic_frame_reference",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/test_rw_regressions.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_test_rw_regressions_streamregressions",
       "target": "scripts_test_rw_regressions_streamregressions_test_actual_skin_and_legitimate_pelvis",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L45",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -11885,7 +12714,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L52",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -11896,62 +12725,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L57",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_rw_regressions_streamregressions",
-      "target": "scripts_test_rw_regressions_streamregressions_test_exported_head_and_non_skin_pixels_remain_identical",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L65",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_rw_regressions_streamregressions",
-      "target": "scripts_test_rw_regressions_streamregressions_test_reject_root_weight",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L87",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_rw_regressions_streamregressions",
-      "target": "scripts_test_rw_regressions_streamregressions_test_reject_invalid_index",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L91",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_rw_regressions_streamregressions",
-      "target": "scripts_test_rw_regressions_streamregressions_test_reject_nan_weight",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L95",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_test_rw_regressions_streamregressions",
-      "target": "scripts_test_rw_regressions_streamregressions_test_reject_negative_weights_even_with_unit_sum",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/test_rw_regressions.py",
-      "source_location": "L99",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -12197,14 +12971,14 @@
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_235",
+      "source": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_284",
       "target": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_txd_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L235",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -12219,14 +12993,14 @@
       "weight": 1.0
     },
     {
-      "source": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_67",
+      "source": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_74",
       "target": "agents_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_dff_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".agents/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L67",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -12637,14 +13411,14 @@
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_235",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_284",
       "target": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_txd_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L235",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -12659,14 +13433,14 @@
       "weight": 1.0
     },
     {
-      "source": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_67",
+      "source": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_rationale_74",
       "target": "claude_skills_gtasa_ps2_skins_scripts_validate_rw_stream_audit_dff_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": ".claude/skills/gtasa-ps2-skins/scripts/validate_rw_stream.py",
-      "source_location": "L67",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -13077,14 +13851,14 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_rw_stream_rationale_235",
+      "source": "scripts_validate_rw_stream_rationale_284",
       "target": "scripts_validate_rw_stream_audit_txd_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L235",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -13099,14 +13873,14 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_rw_stream_rationale_67",
+      "source": "scripts_validate_rw_stream_rationale_74",
       "target": "scripts_validate_rw_stream_audit_dff_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/validate_rw_stream.py",
-      "source_location": "L67",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -14094,5 +14868,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "923b2430aec01014bb1169f0475672141ea88f97"
+  "built_at_commit": "ebcfdf83def916a10bdc4178145993d90ffef307"
 }
