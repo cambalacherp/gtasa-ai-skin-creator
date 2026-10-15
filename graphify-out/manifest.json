@@ -6,10 +6,10 @@
     "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py": {
-    "mtime": 1792082974.0007148,
-    "seen": 1792085847.342252,
-    "ast_hash": "e2555ebd46cab382a245c3323e3c1b71",
-    "semantic_hash": "e2555ebd46cab382a245c3323e3c1b71"
+    "mtime": 1792106520.170521,
+    "seen": 1792106554.5373793,
+    "ast_hash": "7e6df6331814a53a3ff77b1241df23df",
+    "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/scripts/run_kitbash_suite.py": {
     "mtime": 1792082896.304747,
@@ -36,10 +36,10 @@
     "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/scripts/quantize_ps2_txd.py": {
-    "mtime": 1792082974.0007148,
-    "seen": 1792085847.342252,
-    "ast_hash": "e2555ebd46cab382a245c3323e3c1b71",
-    "semantic_hash": "e2555ebd46cab382a245c3323e3c1b71"
+    "mtime": 1792106520.170521,
+    "seen": 1792106554.5373793,
+    "ast_hash": "7e6df6331814a53a3ff77b1241df23df",
+    "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/scripts/run_kitbash_suite.py": {
     "mtime": 1792082896.304747,
@@ -84,10 +84,10 @@
     "semantic_hash": ""
   },
   "scripts/quantize_ps2_txd.py": {
-    "mtime": 1792082974.0007148,
-    "seen": 1792085847.342252,
-    "ast_hash": "e2555ebd46cab382a245c3323e3c1b71",
-    "semantic_hash": "e2555ebd46cab382a245c3323e3c1b71"
+    "mtime": 1792106280.0704904,
+    "seen": 1792106554.5373793,
+    "ast_hash": "7e6df6331814a53a3ff77b1241df23df",
+    "semantic_hash": ""
   },
   "scripts/run_kitbash_suite.py": {
     "mtime": 1792082896.304747,
@@ -108,27 +108,27 @@
     "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/SKILL.md": {
-    "mtime": 1792097816.574872,
-    "seen": 1792097986.451525,
-    "ast_hash": "74d4d07858f124e5c21d30465015a60c",
+    "mtime": 1792106477.3026147,
+    "seen": 1792106554.5373793,
+    "ast_hash": "749ae8836a8f9be1652505ef6336a81d",
     "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/references/AGENTS_SPEC.md": {
-    "mtime": 1792097956.9873674,
-    "seen": 1792097986.451525,
-    "ast_hash": "fe715f5d39f5a8183bf24385d31d0e7b",
+    "mtime": 1792106520.179716,
+    "seen": 1792106554.5373793,
+    "ast_hash": "84a5af747d7b67fa35348c626a2ce46b",
     "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/SKILL.md": {
-    "mtime": 1792097816.574872,
-    "seen": 1792097986.451525,
-    "ast_hash": "74d4d07858f124e5c21d30465015a60c",
+    "mtime": 1792106477.3026147,
+    "seen": 1792106554.5373793,
+    "ast_hash": "749ae8836a8f9be1652505ef6336a81d",
     "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/references/AGENTS_SPEC.md": {
-    "mtime": 1792097956.9873674,
-    "seen": 1792097986.451525,
-    "ast_hash": "fe715f5d39f5a8183bf24385d31d0e7b",
+    "mtime": 1792106520.179716,
+    "seen": 1792106554.5373793,
+    "ast_hash": "84a5af747d7b67fa35348c626a2ce46b",
     "semantic_hash": ""
   },
   ".github/copilot-instructions.md": {
@@ -138,9 +138,9 @@
     "semantic_hash": "a68df5859dc5d2c9f152a0475e0c9ca7"
   },
   "AGENTS.md": {
-    "mtime": 1792097908.9416366,
-    "seen": 1792097986.451525,
-    "ast_hash": "fe715f5d39f5a8183bf24385d31d0e7b",
+    "mtime": 1792106452.428816,
+    "seen": 1792106554.5373793,
+    "ast_hash": "84a5af747d7b67fa35348c626a2ce46b",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -186,15 +186,15 @@
     "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py": {
-    "mtime": 1792097956.984366,
-    "seen": 1792097986.451525,
-    "ast_hash": "25c82528d4abe6383556719f9164fd6c",
+    "mtime": 1792106520.17652,
+    "seen": 1792106554.5373793,
+    "ast_hash": "feb4388b2a04636c399254ebf4cf4405",
     "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py": {
-    "mtime": 1792097956.9863665,
-    "seen": 1792097986.451525,
-    "ast_hash": "1bd7e1abaea4f7f0f766faa3e235699a",
+    "mtime": 1792106520.1787064,
+    "seen": 1792106554.5373793,
+    "ast_hash": "47aec57c85eaec064eb6f88729c8a5a8",
     "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/scripts/render_ps2_vibesheet.py": {
@@ -204,20 +204,20 @@
     "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/scripts/test_rw_regressions.py": {
-    "mtime": 1792097956.984366,
-    "seen": 1792097986.451525,
-    "ast_hash": "25c82528d4abe6383556719f9164fd6c",
+    "mtime": 1792106520.17652,
+    "seen": 1792106554.5373793,
+    "ast_hash": "feb4388b2a04636c399254ebf4cf4405",
     "semantic_hash": ""
   },
   ".claude/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py": {
-    "mtime": 1792097956.9863665,
-    "seen": 1792097986.451525,
-    "ast_hash": "1bd7e1abaea4f7f0f766faa3e235699a",
+    "mtime": 1792106520.1787064,
+    "seen": 1792106554.5373793,
+    "ast_hash": "47aec57c85eaec064eb6f88729c8a5a8",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/sindaco_lsv2_report.json": {
-    "mtime": 1792097910.0249608,
-    "seen": 1792097986.451525,
+    "mtime": 1792106484.7257855,
+    "seen": 1792106554.5373793,
     "ast_hash": "647a43297e5bdef63914120eeb36bf1b",
     "semantic_hash": ""
   },
@@ -228,15 +228,15 @@
     "semantic_hash": ""
   },
   "scripts/test_rw_regressions.py": {
-    "mtime": 1792097872.588528,
-    "seen": 1792097986.451525,
-    "ast_hash": "25c82528d4abe6383556719f9164fd6c",
+    "mtime": 1792106202.949123,
+    "seen": 1792106554.5373793,
+    "ast_hash": "feb4388b2a04636c399254ebf4cf4405",
     "semantic_hash": ""
   },
   "scripts/vanilla_rw_kitbash.py": {
-    "mtime": 1792097951.0334594,
-    "seen": 1792097986.451525,
-    "ast_hash": "1bd7e1abaea4f7f0f766faa3e235699a",
+    "mtime": 1792106280.363476,
+    "seen": 1792106554.5373793,
+    "ast_hash": "47aec57c85eaec064eb6f88729c8a5a8",
     "semantic_hash": ""
   },
   "HANDOFF_sindaco_lsv2.md": {
@@ -246,27 +246,27 @@
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/LEEME.txt": {
-    "mtime": 1792097952.7511268,
-    "seen": 1792097986.451525,
-    "ast_hash": "d40ad1f902eaa8614367a5e41f4714da",
+    "mtime": 1792106515.8530993,
+    "seen": 1792106554.5373793,
+    "ast_hash": "0f9558f86a30640af74df23b4810878a",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/artconfig.txt": {
-    "mtime": 1792097952.7501237,
-    "seen": 1792097986.451525,
+    "mtime": 1792106515.8521,
+    "seen": 1792106554.5373793,
     "ast_hash": "6c062675dff01bcf66255db6292b6f6c",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/sindaco_lsv2_atlas.png": {
-    "mtime": 1792097873.82566,
-    "seen": 1792097986.451525,
-    "ast_hash": "e4a88fa7f219e783746237c29b8c8e46",
+    "mtime": 1792106281.8111558,
+    "seen": 1792106554.5373793,
+    "ast_hash": "993bc63d5f45730c68de8f435af4a52d",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/sindaco_lsv2_vibe_sheet.png": {
-    "mtime": 1792097909.5548127,
-    "seen": 1792097986.451525,
-    "ast_hash": "f47f7992ef9430e26a28f647e8a2b57b",
+    "mtime": 1792106348.387308,
+    "seen": 1792106554.5373793,
+    "ast_hash": "886ed6f227f1457b333d596378998815",
     "semantic_hash": ""
   },
   ".agents/skills/gtasa-ps2-skins/scripts/render_blender_cli.py": {
@@ -306,45 +306,99 @@
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/Back.png": {
-    "mtime": 1792097891.5789225,
-    "seen": 1792097986.451525,
-    "ast_hash": "55739421d3659d2e555080a10cf9a774",
+    "mtime": 1792106314.9472692,
+    "seen": 1792106554.5373793,
+    "ast_hash": "9d041af40be104bf53d699ab86b1fe97",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/Front.png": {
-    "mtime": 1792097883.9982452,
-    "seen": 1792097986.451525,
-    "ast_hash": "ec9c1736db3534a4ded4307e1dcda783",
+    "mtime": 1792106301.418966,
+    "seen": 1792106554.5373793,
+    "ast_hash": "40d1a7661c69cf9c211e687d733e2df8",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/NeckFront.png": {
-    "mtime": 1792097904.599154,
-    "seen": 1792097986.451525,
-    "ast_hash": "50d6b853ff3279d4cb0efe8d52c97448",
+    "mtime": 1792106339.447158,
+    "seen": 1792106554.5373793,
+    "ast_hash": "d327c15dcf84951aa4bb856cfb63263f",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/NeckSide.png": {
-    "mtime": 1792097909.078022,
-    "seen": 1792097986.451525,
-    "ast_hash": "71a6f181bfee4012486e5387f40d06ab",
+    "mtime": 1792106347.7929845,
+    "seen": 1792106554.5373793,
+    "ast_hash": "2fa23de138bc0c812056f6d3ffc10cbe",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/PoseTest.png": {
-    "mtime": 1792097899.4518912,
-    "seen": 1792097986.451525,
-    "ast_hash": "48d7c1df710293e9931f5f55fffd754e",
+    "mtime": 1792106329.6391037,
+    "seen": 1792106554.5373793,
+    "ast_hash": "b7c5de2cd4c7dbe8044a5389d5940843",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/Side.png": {
-    "mtime": 1792097887.6363573,
-    "seen": 1792097986.451525,
-    "ast_hash": "fe9b013317e3f76f4ee03059dc4edc8f",
+    "mtime": 1792106307.775974,
+    "seen": 1792106554.5373793,
+    "ast_hash": "bfcca9a62db6d5b1db37611669df40de",
     "semantic_hash": ""
   },
   "output/sindaco_lsv2/blender_screenshots/ThreeQuarter.png": {
-    "mtime": 1792097895.6208725,
-    "seen": 1792097986.451525,
-    "ast_hash": "933bb152e1043a78acda5701b50b8a16",
+    "mtime": 1792106322.486221,
+    "seen": 1792106554.5373793,
+    "ast_hash": "31c6bd847896474a795c9941dda8aec6",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gtasa-ps2-skins/assets/tone_profiles/sindaco_lsv2.json": {
+    "mtime": 1792106155.6811655,
+    "seen": 1792106554.5373793,
+    "ast_hash": "065d88b29b80f4e7e599ba5f7c425e1f",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gtasa-ps2-skins/scripts/match_skin_tone.py": {
+    "mtime": 1792106520.1685238,
+    "seen": 1792106554.5373793,
+    "ast_hash": "5cd1d3940e6be136d403e372671eeba5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gtasa-ps2-skins/assets/tone_profiles/sindaco_lsv2.json": {
+    "mtime": 1792106155.6811655,
+    "seen": 1792106554.5373793,
+    "ast_hash": "065d88b29b80f4e7e599ba5f7c425e1f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gtasa-ps2-skins/scripts/match_skin_tone.py": {
+    "mtime": 1792106520.1685238,
+    "seen": 1792106554.5373793,
+    "ast_hash": "5cd1d3940e6be136d403e372671eeba5",
+    "semantic_hash": ""
+  },
+  "output/sindaco_lsv2/sindaco_lsv2_tone_report.json": {
+    "mtime": 1792106281.7791567,
+    "seen": 1792106554.5373793,
+    "ast_hash": "4cfa76c66e88dd1bbd1d88a2f535889f",
+    "semantic_hash": ""
+  },
+  "scripts/match_skin_tone.py": {
+    "mtime": 1792106279.788706,
+    "seen": 1792106554.5373793,
+    "ast_hash": "5cd1d3940e6be136d403e372671eeba5",
+    "semantic_hash": ""
+  },
+  ".agents/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md": {
+    "mtime": 1792106435.4411414,
+    "seen": 1792106554.5373793,
+    "ast_hash": "d1fdffeca477aa52c8c26bb5a397d79e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gtasa-ps2-skins/references/vanilla_kitbash_lessons.md": {
+    "mtime": 1792106435.4411414,
+    "seen": 1792106554.5373793,
+    "ast_hash": "d1fdffeca477aa52c8c26bb5a397d79e",
+    "semantic_hash": ""
+  },
+  "output/sindaco_lsv2/sindaco_lsv2_body_skin_mask.png": {
+    "mtime": 1792106281.5986514,
+    "seen": 1792106554.5373793,
+    "ast_hash": "1fcec76c7e9b1bfd986ee328cde18dbe",
     "semantic_hash": ""
   }
 }
