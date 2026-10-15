@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "validation_scope": {
+    "binary_audit": true,
+    "in_game_tested": false
+  },
+  "dff_audit": {
+    "valid": true,
+    "rw_version": "0x1803FFFF",
+    "frame_count": 33,
+    "hanim_bone_count": 32,
+    "vertex_count": 1050,
+    "triangle_count": 1145,
+    "has_normals": true,
+    "has_prelight": false,
+    "skin_bones": 32,
+    "node_bone_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      6,
+      7,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      302,
+      301,
+      201,
+      41,
+      42,
+      43,
+      44,
+      51,
+      52,
+      53,
+      54
+    ],
+    "referenced_textures": [
+      "sindaco_lsv2"
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "txd_audit": {
+    "valid": true,
+    "rw_version": "0x1803FFFF",
+    "texture_count": 1,
+    "textures": [
+      {
+        "name": "sindaco_lsv2",
+        "platform_id": 9,
+        "dimensions": "512x256",
+        "depth_bpp": 32,
+        "raster_format_hex": "0x0600",
+        "is_pal8_ps2_style": false
+      }
+    ],
+    "errors": []
+  },
+  "cross_check_errors": [],
+  "openmp_samp_integration": {
+    "artconfig_line": "AddCharModel(109, 20004, \"sindaco_lsv2.dff\", \"sindaco_lsv2.txd\");",
+    "pawn_snippet": "// Automatic integration for open.mp / SA-MP 0.3.DL\npublic OnGameModeInit()\n{\n    AddCharModel(109, 20004, \"sindaco_lsv2.dff\", \"sindaco_lsv2.txd\");\n    return 1;\n}"
+  }
+}

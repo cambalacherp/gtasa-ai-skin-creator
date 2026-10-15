@@ -17,3 +17,9 @@ Design, model, surgically kitbash, and compile pedestrian skins (peds) for Grand
 2. **Build the Rig and Low-Poly Mesh**: Run `python3 scripts/build_ps2_rig_bpy.py --preset <preset> --outdir ./output/<id>`.
 3. **Quantize the Texture to PS2 PAL8 and Pack the `.txd`**: Run `python3 scripts/quantize_ps2_txd.py --preset <preset> --output ./output/<id>/<id>.txd`.
 4. **Validate the RenderWare Stream**: Run `python3 scripts/validate_rw_stream.py --dff ./output/<id>/<id>.dff --txd ./output/<id>/<id>.txd` and verify `"status": "PASS"`.
+
+## Real vanilla head swaps
+
+For a named vanilla head/body pair, use `scripts/vanilla_rw_kitbash.py` with `--game-dir`, `--head-model`, `--body-model`, `--skin-name` and `--outdir`. This preserves the real meshes, UVs and the body's 33-frame / 32-node rig. The older procedural preset generator is a proxy path.
+
+Render the actual exported files with `python scripts/render_ps2_vibesheet.py --dff <skin>.dff --txd <skin>.txd --output <skin>_vibe_sheet.png`. This produces Front, Side, Back, 3/4 and a weighted diagnostic Pose Test. Validate with the requested `--base-skin-id` and `--custom-skin-id`; report binary/visual checks separately from in-game testing.
