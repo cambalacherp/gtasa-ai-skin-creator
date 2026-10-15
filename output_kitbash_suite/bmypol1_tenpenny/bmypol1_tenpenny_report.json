@@ -1,0 +1,58 @@
+{
+  "preset": "bmypol1_tenpenny",
+  "description": "African-American head with the bmypol1 beret/cap (ID 66) welded onto Tenpenny's short-sleeve LSPD uniform and tactical belt (ID 265).",
+  "status": "PASS",
+  "dff_info": {
+    "dff_path": "/working_dir/c_046637294f8a4922/artifacts/file_generation/ttl=63d/intermediate/gtasa-ps2-skins-repo/output_kitbash_suite/bmypol1_tenpenny/bmypol1_tenpenny.dff",
+    "preset": "bmypol1_tenpenny",
+    "rw_version": "0x1803ffff",
+    "bone_count": 32,
+    "vertex_count": 536,
+    "triangle_count": 832,
+    "texture_name": "bmypol_tenp"
+  },
+  "txd_info": {
+    "txd_path": "/working_dir/c_046637294f8a4922/artifacts/file_generation/ttl=63d/intermediate/gtasa-ps2-skins-repo/output_kitbash_suite/bmypol1_tenpenny/bmypol1_tenpenny.txd",
+    "preview_png": "/working_dir/c_046637294f8a4922/artifacts/file_generation/ttl=63d/intermediate/gtasa-ps2-skins-repo/output_kitbash_suite/bmypol1_tenpenny/bmypol1_tenpenny_atlas.png",
+    "preset": "bmypol1_tenpenny",
+    "texture_name": "bmypol_tenp",
+    "dimensions": "256x256",
+    "palette_colors_used": 256,
+    "raster_format": "PAL8 (8-bit Indexed PS2 Style on D3D9 PC)",
+    "rw_version": "0x1803ffff",
+    "byte_size": 66728
+  },
+  "dff_audit": {
+    "valid": true,
+    "rw_version": "0x1803FFFF",
+    "frame_count": 32,
+    "hanim_bone_count": 32,
+    "vertex_count": 536,
+    "triangle_count": 832,
+    "has_normals": true,
+    "has_prelight": false,
+    "skin_bones": 32,
+    "referenced_textures": [
+      "bmypol_tenp"
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "txd_audit": {
+    "valid": true,
+    "rw_version": "0x1803FFFF",
+    "texture_count": 1,
+    "textures": [
+      {
+        "name": "bmypol_tenp",
+        "platform_id": 9,
+        "dimensions": "256x256",
+        "depth_bpp": 8,
+        "raster_format_hex": "0x2500",
+        "is_pal8_ps2_style": true
+      }
+    ],
+    "errors": []
+  },
+  "artconfig_line": "AddCharModel(265, 20002, \"bmypol1_tenpenny.dff\", \"bmypol1_tenpenny.txd\");"
+}

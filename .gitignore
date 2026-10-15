@@ -1,0 +1,7 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# graphify machine-local state (interpreter path + scan root; portable outputs stay tracked)
+graphify-out/.graphify_python
+graphify-out/.graphify_root

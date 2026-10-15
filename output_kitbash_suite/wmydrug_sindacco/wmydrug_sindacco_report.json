@@ -1,0 +1,58 @@
+{
+  "preset": "wmydrug_sindacco",
+  "description": "wmydrug body (ID 29) with the hood folded back onto Spine1(4) + Johnny Sindacco head (ID 119) welded at Neck(5).",
+  "status": "PASS",
+  "dff_info": {
+    "dff_path": "/working_dir/c_046637294f8a4922/artifacts/file_generation/ttl=63d/intermediate/gtasa-ps2-skins-repo/output_kitbash_suite/wmydrug_sindacco/wmydrug_sindacco.dff",
+    "preset": "wmydrug_sindacco",
+    "rw_version": "0x1803ffff",
+    "bone_count": 32,
+    "vertex_count": 568,
+    "triangle_count": 880,
+    "texture_name": "wmydrug_sind"
+  },
+  "txd_info": {
+    "txd_path": "/working_dir/c_046637294f8a4922/artifacts/file_generation/ttl=63d/intermediate/gtasa-ps2-skins-repo/output_kitbash_suite/wmydrug_sindacco/wmydrug_sindacco.txd",
+    "preview_png": "/working_dir/c_046637294f8a4922/artifacts/file_generation/ttl=63d/intermediate/gtasa-ps2-skins-repo/output_kitbash_suite/wmydrug_sindacco/wmydrug_sindacco_atlas.png",
+    "preset": "wmydrug_sindacco",
+    "texture_name": "wmydrug_sind",
+    "dimensions": "256x256",
+    "palette_colors_used": 256,
+    "raster_format": "PAL8 (8-bit Indexed PS2 Style on D3D9 PC)",
+    "rw_version": "0x1803ffff",
+    "byte_size": 66728
+  },
+  "dff_audit": {
+    "valid": true,
+    "rw_version": "0x1803FFFF",
+    "frame_count": 32,
+    "hanim_bone_count": 32,
+    "vertex_count": 568,
+    "triangle_count": 880,
+    "has_normals": true,
+    "has_prelight": false,
+    "skin_bones": 32,
+    "referenced_textures": [
+      "wmydrug_sind"
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "txd_audit": {
+    "valid": true,
+    "rw_version": "0x1803FFFF",
+    "texture_count": 1,
+    "textures": [
+      {
+        "name": "wmydrug_sind",
+        "platform_id": 9,
+        "dimensions": "256x256",
+        "depth_bpp": 8,
+        "raster_format_hex": "0x2500",
+        "is_pal8_ps2_style": true
+      }
+    ],
+    "errors": []
+  },
+  "artconfig_line": "AddCharModel(29, 20001, \"wmydrug_sindacco.dff\", \"wmydrug_sindacco.txd\");"
+}
