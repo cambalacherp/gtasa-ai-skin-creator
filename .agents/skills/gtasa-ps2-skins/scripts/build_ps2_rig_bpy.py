@@ -426,14 +426,13 @@ def write_standalone_gtasa_ped_dff(
     # 2. rwID_GEOMETRY (0x000F) — no rpGEOMETRYPRELIT (0x08), for clean dynamic lighting
     geom_flags = 0x00000076
     geom_header = struct.pack(
-        "<BBHIIIfff",
-        geom_flags & 0xFF,
+        "<HBBIII",
+        geom_flags,
         1,  # 1 UV set
         0,
         num_tris,
         num_verts,
         1,
-        1.0, 1.0, 1.0,
     )
     uv_bytes = b"".join(struct.pack("<ff", u, v) for u, v in uvs)
     tri_bytes = b"".join(struct.pack("<HHHH", v2, v1, mat_id, v3) for v1, v2, v3, mat_id in triangles)
