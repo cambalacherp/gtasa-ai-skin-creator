@@ -1,29 +1,29 @@
 # Graph Report - gtasa-ps2-skins-repo  (2026-10-15)
 
 ## Corpus Check
-- 52 files · ~213,078 words
+- 52 files · ~211,643 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 461 nodes · 796 edges · 21 communities (17 shown, 4 thin omitted)
+- 445 nodes · 780 edges · 21 communities (16 shown, 5 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ebcfdf83`
+- Built from commit: `a4dc4f26`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - StreamRegressions
 - StreamRegressions
-- StreamRegressions
+- audit_dff_file
 - AGENTS.md Master Specification
 - .agents/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py
 - .claude/skills/gtasa-ps2-skins/scripts/sync_agent_harnesses.py
 - scripts/sync_agent_harnesses.py
 - scripts/vanilla_rw_kitbash.py
-- main
+- apply_ps2_color_pipeline
 - .agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py
 - bmypol1_tenpenny Texture Atlas (256x256 PS2 Ped Skin)
 - wmydrug_sindacco Texture Atlas (256x256 PS2 Ped Skin)
@@ -32,7 +32,7 @@
 - Harness Entry Points, Mirrors, and Drift Control
 - Dryxio gta-3d-ai Toolchain (GTA Scout, Ariane, GTA Stuff)
 - .claude/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py
-- HANDOFF — Skin `sindaco_lsv2` (cabeza `sindaco` + cuerpo `lsv2`)
+- commit-msg
 - .agents/skills/gtasa-ps2-skins/scripts/render_blender_worker.py
 - .claude/skills/gtasa-ps2-skins/scripts/render_blender_worker.py
 - scripts/render_blender_worker.py
@@ -73,19 +73,19 @@
 - **Tenpenny Police Uniform Composite Layout** — output_kitbash_suite_bmypol1_tenpenny_bmypol1_tenpenny_atlas_uniform_shirt_region, output_kitbash_suite_bmypol1_tenpenny_bmypol1_tenpenny_atlas_badge_region, output_kitbash_suite_bmypol1_tenpenny_bmypol1_tenpenny_atlas_duty_belt_region, output_kitbash_suite_bmypol1_tenpenny_bmypol1_tenpenny_atlas_trousers_region [INFERRED 0.85]
 - **Autonomous PS2 Skin Compilation Pipeline** — agents_prompt_specificity_router, agents_required_deliverables, agents_ps2_topology_budget, agents_32_bone_skeleton [INFERRED 0.85]
 
-## Communities (21 total, 4 thin omitted)
+## Communities (21 total, 5 thin omitted)
 
 ### Community 0 - "StreamRegressions"
-Cohesion: 0.07
-Nodes (33): _append_prism_ring_segment(), generate_kitbash_ped_arrays(), main(), parse_cli_args(), Namespace, Append a low-poly prismatic tube segment mapped to a specific UV region…, Build the geometry arrays, per-quadrant UVs, and bone weights (`Skin PLG`) for…, Build a RenderWare binary chunk: 12-byte header plus payload. (+25 more)
+Cohesion: 0.09
+Nodes (21): _append_prism_ring_segment(), generate_kitbash_ped_arrays(), main(), parse_cli_args(), Namespace, Append a low-poly prismatic tube segment mapped to a specific UV region…, Build the geometry arrays, per-quadrant UVs, and bone weights (`Skin PLG`) for…, Build a RenderWare binary chunk: 12-byte header plus payload. (+13 more)
 
 ### Community 1 - "StreamRegressions"
 Cohesion: 0.07
-Nodes (34): _append_prism_ring_segment(), generate_kitbash_ped_arrays(), main(), parse_cli_args(), Namespace, Append a low-poly prismatic tube segment mapped to a specific UV region…, Build the geometry arrays, per-quadrant UVs, and bone weights (`Skin PLG`) for…, Build a RenderWare binary chunk: 12-byte header plus payload. (+26 more)
-
-### Community 2 - "StreamRegressions"
-Cohesion: 0.07
 Nodes (33): _append_prism_ring_segment(), generate_kitbash_ped_arrays(), main(), parse_cli_args(), Namespace, Append a low-poly prismatic tube segment mapped to a specific UV region…, Build the geometry arrays, per-quadrant UVs, and bone weights (`Skin PLG`) for…, Build a RenderWare binary chunk: 12-byte header plus payload. (+25 more)
+
+### Community 2 - "audit_dff_file"
+Cohesion: 0.09
+Nodes (29): _append_prism_ring_segment(), generate_kitbash_ped_arrays(), main(), parse_cli_args(), Namespace, Append a low-poly prismatic tube segment mapped to a specific UV region…, Build the geometry arrays, per-quadrant UVs, and bone weights (`Skin PLG`) for…, Build a RenderWare binary chunk: 12-byte header plus payload. (+21 more)
 
 ### Community 3 - "AGENTS.md Master Specification"
 Cohesion: 0.07
@@ -104,16 +104,16 @@ Cohesion: 0.23
 Nodes (14): check(), copy_if_changed(), iter_bundle_files(), main(), pipeline_scripts(), Path, Byte-level drift audit across every mirror. Returns 0 when clean, 1 on any…, Every directory that must hold a byte-identical skill bundle (canonical first). (+6 more)
 
 ### Community 7 - "scripts/vanilla_rw_kitbash.py"
-Cohesion: 0.07
-Nodes (48): load_profile(), match_body_skin(), palette_for_skin_edit(), Apply an explicit UV-mask color transfer; keep the reference head untouched.…, Reserve exact protected colors, then spend remaining slots on new skin tones., samples(), main(), Render real DFF/TXD geometry with local Blender CLI; no image generation API. (+40 more)
+Cohesion: 0.05
+Nodes (52): load_profile(), match_body_skin(), palette_for_skin_edit(), Apply an explicit UV-mask color transfer; keep the reference head untouched.…, Reserve exact protected colors, then spend remaining slots on new skin tones., samples(), main(), Render real DFF/TXD geometry with local Blender CLI; no image generation API. (+44 more)
 
-### Community 8 - "main"
-Cohesion: 0.36
-Nodes (6): main(), Render real DFF/TXD geometry with local Blender CLI; no image generation API., main(), posed_vertices(), Skin pose deformation and compatibility entry point for local Blender CLI…, Apply hierarchical bone rotations around pivots from inverse bind matrices.
+### Community 8 - "apply_ps2_color_pipeline"
+Cohesion: 0.24
+Nodes (12): apply_ps2_color_pipeline(), build_gtasa_pc_txd_bytes(), generate_kitbash_atlas(), main(), process_and_pack_ps2_txd(), Image, Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-…, Build a native `.txd` (`rwID_TEXDICTIONARY = 0x0016`) for GTA:SA PC… (+4 more)
 
 ### Community 9 - ".agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py"
-Cohesion: 0.08
-Nodes (41): load_profile(), match_body_skin(), palette_for_skin_edit(), Apply an explicit UV-mask color transfer; keep the reference head untouched.…, Reserve exact protected colors, then spend remaining slots on new skin tones., samples(), apply_ps2_color_pipeline(), Resize, compress levels to `[12, 235]`, and quantize to 256 colors with Floyd-… (+33 more)
+Cohesion: 0.07
+Nodes (48): load_profile(), match_body_skin(), palette_for_skin_edit(), Apply an explicit UV-mask color transfer; keep the reference head untouched.…, Reserve exact protected colors, then spend remaining slots on new skin tones., samples(), main(), Render real DFF/TXD geometry with local Blender CLI; no image generation API. (+40 more)
 
 ### Community 10 - "bmypol1_tenpenny Texture Atlas (256x256 PS2 Ped Skin)"
 Cohesion: 0.33
@@ -139,29 +139,25 @@ Nodes (3): Agent-Agnostic Single-Source-of-Truth Design, Harness Entry Points, M
 Cohesion: 0.07
 Nodes (48): load_profile(), match_body_skin(), palette_for_skin_edit(), Apply an explicit UV-mask color transfer; keep the reference head untouched.…, Reserve exact protected colors, then spend remaining slots on new skin tones., samples(), main(), Render real DFF/TXD geometry with local Blender CLI; no image generation API. (+40 more)
 
-### Community 17 - "HANDOFF — Skin `sindaco_lsv2` (cabeza `sindaco` + cuerpo `lsv2`)"
-Cohesion: 0.11
-Nodes (17): 1. Objetivo, 2.1 El kitbash real ya compila end-to-end, 2.2 La estrategia de costura cambió (importante), 2.3 Verificación de malla del `.dff` actual (recién medida), 2.4 Estructura binaria verificada byte a byte, 2. Estado actual: qué está HECHO y VERIFICADO, 3. Por qué el validador da FAIL (ya diagnosticado, son 3 bugs del validador), 4. Pasos restantes (en orden) (+9 more)
-
 ## Knowledge Gaps
-- **32 isolated node(s):** `Neck surgery`, `Verified RenderWare layout`, `Coordinates, previews and process handling`, `Skin color matching`, `Verification and memory` (+27 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 170 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **19 isolated node(s):** `Neck surgery`, `Verified RenderWare layout`, `Coordinates, previews and process handling`, `Skin color matching`, `Verification and memory` (+14 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 158 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `write_standalone_gtasa_ped_dff()` connect `StreamRegressions` to `.agents/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `write_standalone_gtasa_ped_dff()` connect `StreamRegressions` to `.claude/skills/gtasa-ps2-skins/scripts/vanilla_rw_kitbash.py`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `write_standalone_gtasa_ped_dff()` connect `StreamRegressions` to `scripts/vanilla_rw_kitbash.py`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `write_standalone_gtasa_ped_dff()` connect `audit_dff_file` to `scripts/vanilla_rw_kitbash.py`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `Neck surgery`, `Verified RenderWare layout`, `Coordinates, previews and process handling` to the rest of the system?**
-  _32 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _19 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `StreamRegressions` be split into smaller, more focused modules?**
+  _Cohesion score 0.0931174089068826 - nodes in this community are weakly interconnected._
 - **Should `StreamRegressions` be split into smaller, more focused modules?**
   _Cohesion score 0.06787330316742081 - nodes in this community are weakly interconnected._
-- **Should `StreamRegressions` be split into smaller, more focused modules?**
-  _Cohesion score 0.06708595387840671 - nodes in this community are weakly interconnected._
-- **Should `StreamRegressions` be split into smaller, more focused modules?**
-  _Cohesion score 0.06787330316742081 - nodes in this community are weakly interconnected._
-- **Should `AGENTS.md Master Specification` be split into smaller, more focused modules?**
-  _Cohesion score 0.07196969696969698 - nodes in this community are weakly interconnected._
+- **Should `audit_dff_file` be split into smaller, more focused modules?**
+  _Cohesion score 0.0907563025210084 - nodes in this community are weakly interconnected._
