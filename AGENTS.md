@@ -122,6 +122,8 @@ The following table is read from vanilla LSV2. Root (Bone ID 0) must have zero w
 - Preserve the body FrameList, HAnim node ordering and inverse bind matrices. Pack one textured Atomic, a D3D9 8888 atlas with a baked 256-color palette, and RenderWare stamp `0x1803FFFF`.
 - Render real screenshots with local Blender CLI after rebuilding, including front/side neck closeups. Do not use image generation models for previews. Run the binary validator. A binary PASS and a diagnostic pose are not evidence of an in-game runtime test.
 
+For the approved variant, match body skin to the Sindaco head with `--match-body-skin-to-head` and the inspected canonical UV profile. Preserve head and non-skin pixels after palette quantization. The skill reference `references/vanilla_kitbash_lessons.md` records corrected handoff findings.
+
 ## 7. Harness Entry Points, Mirrors, and Drift Control
 
 The repository is agent-agnostic: `AGENTS.md` (this file) and `.agents/skills/gtasa-ps2-skins/` are the only canonical agent-facing sources; every other harness file is a thin import or a byte-verified mirror.

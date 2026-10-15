@@ -1,31 +1,40 @@
 ---
 name: gtasa-ps2-skins
-description: Create, edit, and kitbash low-poly pedestrian skins (peds) for GTA San Andreas, SA-MP, and open.mp in a pure RenderWare PS2 style using Blender CLI (bpy + DragonFF), PAL8 texture quantization (.txd), and binary validation (.dff). Use when the user asks to create a GTA SA skin, make a skin for a faction/mafia/gang, combine heads or clothing from vanilla peds (head swap, fold hoods down, change tees or jeans), pack .dff/.txd files, or generate AddCharModel lines for open.mp and SA-MP.
+description: Create and edit GTA San Andreas pedestrian skins for SA-MP and open.mp from real vanilla heads, bodies and textures. Use for head swaps, clothing edits, skin tone matching, DFF/TXD packing and validation, local Blender CLI previews, and AddCharModel delivery.
 ---
 
 # gtasa-ps2-skins
 
-## Summary
+Use real vanilla meshes and textures when a request names a source ped or head/body pair. The presets in `build_ps2_rig_bpy.py` are procedural proxies, not extracted Rockstar models.
 
-Design, model, surgically kitbash, and compile pedestrian skins (peds) for Grand Theft Auto: San Andreas that are compatible with PC (open.mp and SA-MP) while keeping the low-poly topology, the 32-bone skeleton, and the quantized PlayStation 2 textures on RenderWare 3.6.0.3 (`0x1803FFFF`). Includes an interactive consultant mode for generic faction or character requests.
+- For named parts, execute directly. For generic character requests, follow the customization interview in [references/AGENTS_SPEC.md](references/AGENTS_SPEC.md), section 2.
+- Before surgery or debugging RenderWare data, read [references/vanilla_kitbash_lessons.md](references/vanilla_kitbash_lessons.md): verified binary details, the failed neck-fitting approach and the corrected method.
+- Preserve the user's chosen reference tone. Do not turn one recipe's measurements or UV boxes into rules for every ped.
 
-## Steps
+## Build from vanilla assets
 
-1. **Evaluate Prompt Specificity**:
-   - If the prompt is specific (it states exactly which heads or garments to combine), run the scripts directly.
-   - If the prompt is generic (e.g. "Create a skin for my SA-MP Russian mafia"), run a short 4-point interview offering options with real GTA:SA names and IDs (Rank/Base body, Donor head, Inner-clothing/pants textures, and Accessory surgery) plus a one-click ready recommendation.
-2. **Build the Rig and Low-Poly Mesh**: Run `python3 scripts/build_ps2_rig_bpy.py --preset <preset> --outdir ./output/<id>`.
-3. **Quantize the Texture to PS2 PAL8 and Pack the `.txd`**: Run `python3 scripts/quantize_ps2_txd.py --preset <preset> --output ./output/<id>/<id>.txd`.
-4. **Validate the RenderWare Stream**: Run `python3 scripts/validate_rw_stream.py --dff ./output/<id>/<id>.dff --txd ./output/<id>/<id>.txd` and verify `"status": "PASS"`.
+```powershell
+python scripts/vanilla_rw_kitbash.py --game-dir "<GTA-SA>" --head-model sindaco --body-model lsv2 --skin-name sindaco_lsv2 --outdir output/sindaco_lsv2
+```
 
-## Real vanilla head swaps
+If the user wants body skin to match the head, append `--match-body-skin-to-head`. The inspected Sindaco/LSV2 profile is in `assets/tone_profiles/`. Other pairs need their own inspected masks and sample patches. Preserve tattoos/shading and protect the reference head and clothing through final palette quantization. Do not recolor an entire atlas with a blanket RGB filter.
 
-For a named vanilla head/body pair, use `scripts/vanilla_rw_kitbash.py` with `--game-dir`, `--head-model`, `--body-model`, `--skin-name` and `--outdir`. This preserves the real meshes, UVs and the body's 33-frame / 32-node rig. The older procedural preset generator is a proxy path.
+Rebuild after engine changes; stale DFF/TXD files or screenshots cannot verify current code.
 
-Render the actual exported files with `python scripts/render_blender_cli.py --dff <skin>.dff --txd <skin>.txd --output <skin>_vibe_sheet.png`. This produces Front, Side, Back, 3/4 and a weighted diagnostic Pose Test. Validate with the requested `--base-skin-id` and `--custom-skin-id`; report binary/visual checks separately from in-game testing.
+## Capture and inspect exported files
 
-## Mandatory preview and neck-fit checks
+```powershell
+python scripts/render_blender_cli.py --dff <skin>.dff --txd <skin>.txd --output <skin>_vibe_sheet.png
+```
 
-- Render screenshots locally with Blender CLI (`--background --python scripts/render_blender_worker.py` via `render_blender_cli.py`). Never call an AI image generation service to preview a skin. Keep the raw screenshots and `.blend` scene.
-- Preserve mixed body neck/head triangles and original head height; aligning the donor chin to the shirt collar removes the visible neck. Do not sink the skull to conceal a missing cervical transition.
-- Inspect front and side neck closeups, including the nape for remaining original-head scraps, before delivery. Binary PASS alone is insufficient.
+Use local Blender CLI for previews; never an AI image generation service. Keep the raw Front, Side, Back, ThreeQuarter, PoseTest and neck closeups plus the packed `.blend` scene. The runner accepts `--blender <executable>`, bounds process lifetime and checks Blender's completion marker. The contact sheet assembles actual captures.
+
+Inspect neck length, shoulder/nape continuity, old-head accessories, tone seams, clothing and deformation. PoseTest applies diagnostic weighted rotations; it is not GTA animation playback.
+
+## Audit and deliver
+
+Run `scripts/validate_rw_stream.py --dff <skin>.dff --txd <skin>.txd --base-skin-id <base> --custom-skin-id <custom>`. Deliver DFF/TXD, screenshots, binary report and AddCharModel registration; include the mask/tone audit for color edits. Distinguish binary PASS, visual review and actual in-game testing.
+
+## Maintain the skill
+
+Root `scripts/`, `AGENTS.md` and `.agents/skills/gtasa-ps2-skins/` are canonical. Run `scripts/sync_agent_harnesses.py`, then `--check`, and refresh the installed skill from that bundle. Keep reusable lessons in the linked reference and recipe-specific data in profile assets. Validate entrypoint changes with skill-creator's `quick_validate.py`.
