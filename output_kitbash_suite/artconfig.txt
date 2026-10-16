@@ -1,4 +1,0 @@
-// artconfig.txt - Suite of 3 PS2 RenderWare-style kitbashed skins (open.mp / SA-MP)
-AddCharModel(29, 20001, "wmydrug_sindacco.dff", "wmydrug_sindacco.txd");
-AddCharModel(265, 20002, "bmypol1_tenpenny.dff", "bmypol1_tenpenny.txd");
-AddCharModel(299, 20003, "wmybar_claude.dff", "wmybar_claude.txd");

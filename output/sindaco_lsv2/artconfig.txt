@@ -1,1 +1,0 @@
-AddCharModel(109, 20004, "sindaco_lsv2.dff", "sindaco_lsv2.txd");

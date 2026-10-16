@@ -4,9 +4,20 @@ __pycache__/
 .venv/
 .pytest_cache/
 
+# Generated skin builds and previews (keep deliverables local to each build)
+/output/
+/output_kitbash_suite/
+
+# Operating-system metadata and transient logs
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
 # Blender automatic backups and reproducible render-worker input
 *.blend[0-9]*
-/output/**/blender_screenshots/actual_dff_txd.npz
+*.blend1
+*.blend2
 
 # Graphify local caches, incremental timestamps, and temporary pipeline state
 /graphify-out/cache/

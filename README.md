@@ -32,7 +32,7 @@ Single source of truth: `AGENTS.md` + `.agents/skills/gtasa-ps2-skins/`. Every o
 - `scripts/validate_rw_stream.py`: RenderWare chunk binary validator and Pawn code generator (`AddCharModel`).
 - `scripts/run_kitbash_suite.py`: Automated suite that runs and validates the 3 base tests (`wmydrug_sindacco`, `bmypol1_tenpenny`, `wmybar_claude`).
 - `scripts/sync_agent_harnesses.py`: Mirror synchronizer for all harness entry points, with a `--check` drift audit.
-- `output_kitbash_suite/`: Contains the already compiled and validated `.dff`, `.txd`, `_atlas.png`, `_report.json`, and `artconfig.txt` files.
+- `output/` and `output_kitbash_suite/`: Local generated build artifacts, ignored by Git. Regenerate them with the commands below when needed.
 
 ## Quick Start
 

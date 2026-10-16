@@ -27,6 +27,8 @@ class StreamRegressions(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.output = Path(__file__).resolve().parents[1] / 'output/sindaco_lsv2/sindaco_lsv2.dff'
+        if not cls.output.is_file() or not cls.output.with_suffix('.txd').is_file():
+            raise unittest.SkipTest('Build output/sindaco_lsv2 locally to run exported-skin regressions')
         cls.data = cls.output.read_bytes()
         cls.mesh = parse_ped_dff(cls.data)
         cls.skin = find_chunk(parse_rw_chunks(cls.data), 0x0116)
